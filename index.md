@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="網路漫畫Homestuck的非官方繁中翻譯">
+    <meta name="description" content="Homestuck的非官方简中翻译">
     <meta name="theme-color" content="#ffffff">
     <title>Homestuck繁體中文翻譯</title>
     <!-- imports -->
@@ -81,19 +81,6 @@
 
           </div>
           <div class="pagefoot">
-          </div>
-        </div>
-        <div id='contribute'>
-          <a href='http://www.homestuck.com/'>Homestuck</a>的著作權屬於Andrew Hussie&#65292;這是讀者製作的非官方非營利目的翻譯版本&#12290;
-          詳見<a href="/copyright">著作權聲明</a>&#12290;
-        </div>
-      </div>
-      <div class="footer-bannerframe">
-        <div>
-          HOMESTUCK TRADITIONAL CHINESE TRANSLATION
-        </div>
-      </div>
-    </div>
     <script type="text/javascript">
       makeSpoilerLog();
       flashWarning();
