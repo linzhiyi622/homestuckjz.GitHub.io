@@ -15,3 +15,5 @@
                 <a id="official-link" href="https://www.homestuck.com/story/5982">官方原文</a>
             </div>
           </div>
+<img src="https://www.homestuck2.com/assets/panels/00001.gif">
+        <span style="color: #005682;">屎诗来了</span>
