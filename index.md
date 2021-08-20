@@ -23,6 +23,7 @@
       <span class="mspanav">
         <a href="/">Homestuck繁體中文翻譯</a>
         <img src="https://www.homestuck.com/images/storyfiles/hs2/05979.gif">
+        <span style="color: #005682;">ARANEA: 好的，我剛說到哪了？</span>
         <a href="http://zhhomestuck.blogspot.com" style="color: #29ff4a;">Blogger站</a> |
         <a href="http://www.homestuck.com/" style="color: #29ff4a;">官方首頁</a>
         <img src="/images/candycorn.gif" />
