@@ -14,7 +14,7 @@
           </div>
 <div class="pagefoot">
             
-              <span style="float: left;">&gt;&nbsp;</span><a id="newer-page-link" href="/0001"> [A6I5] ==&gt;</a>
+              <span style="float: left;">&gt;&nbsp;</span><a id="newer-page-link" href="https://linzhiyi622.github.io/homestuckjz.GitHub.io/0001.html"> [A6I5] ==&gt;</a>
             
             <div id="pagefooter-option">
               
