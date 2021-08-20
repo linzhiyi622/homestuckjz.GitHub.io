@@ -9,10 +9,7 @@
 <img src="https://www.homestuck.com/images/storyfiles/hs2/07923.gif"> 
 <span style="color: #005682;">John：我抬起手说嗨</span>
 <div>
-            <span class="">&gt;</span>
-            <a href="/0001">==&gt; </a><br>
-          </div>
-<div class="pagefoot">
+
             
               <span style="float: left;">&gt;&nbsp;</span><a id="newer-page-link" href="https://linzhiyi622.github.io/homestuckjz.GitHub.io/0001.html"> [A6I5] ==&gt;</a>
             
