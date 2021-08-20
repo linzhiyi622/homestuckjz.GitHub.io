@@ -12,3 +12,15 @@
             <span class="">&gt;</span>
             <a href="/story/2">==&gt; </a><br>
           </div>
+<div class="pagefoot">
+            
+              <span style="float: left;">&gt;&nbsp;</span><a id="newer-page-link" href="./0001"> [A6I5] ==&gt;</a>
+            
+            <div id="pagefooter-option">
+              
+                <a id="older-page-link" class="blog-pager-older-link" href="./007881">上一頁</a>
+              
+              |
+                <a id="official-link" href="https://www.homestuck.com/story/5982">官方原文</a>
+            </div>
+          </div>
