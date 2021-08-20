@@ -27,7 +27,7 @@
         <img src="/images/candycorn.gif" />
         <a href="/translators" style="color: #ffb529;">翻譯貢獻人員</a>
       </span>
-
+sidebar-avatar:/img/about-someone.jpg
     </div>
     <div class="content">
       <div class="content-inner">
