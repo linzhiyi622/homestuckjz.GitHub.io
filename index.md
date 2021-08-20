@@ -8,3 +8,7 @@
         <span style="color: #005682;">屎诗来了</span>
 <img src="https://www.homestuck.com/images/storyfiles/hs2/07923.gif"> 
 <span style="color: #005682;">John：我抬起手说嗨</span>
+<div>
+            <span class="">&gt;</span>
+            <a href="/story/2">==&gt; </a><br>
+          </div>
