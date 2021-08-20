@@ -1,13 +1,13 @@
 ﻿<html>
 
         <img src="https://www.homestuck.com/images/storyfiles/hs2/06019.gif">
-        <span style="color: #005682;">等会。为什么刚才那个星球给了我两个小精灵(ELVES)。</span>
+        <span style="color: #33ff00;">等会。为什么刚才那个星球给了我两个小精灵(ELVES)。</span>
         <br>
         <br>
 <span style="color: #000000;">你管它们叫小精灵是吗？</span>
         <br>
         <br>
-<span style="color: #005682;">对啊。</span>
+<span style="color: #33ff00;">对啊。</span>
         <br>
         <br>
         <span style="color: #000000;">可是它们是矮精灵诶！</span>
@@ -16,13 +16,13 @@
         <span style="color: #000000;">或者小地精，用某些唬烂学者的话来说。</span>
         <br>
         <br>
-        <span style="color: #005682;">那他们现在也可以被叫做小精灵了。这是我说的。</span>
+        <span style="color: #33ff00;">那他们现在也可以被叫做小精灵了。这是我说的。</span>
         <br>
         <br>
         <span style="color: #000000;">随你便吧。</span>
         <br>
         <br>
-        <span style="color: #005682;">为什么这次是两个。</span>
+        <span style="color: #33ff00;">为什么这次是两个。</span>
         <br>
         <br>
         <span style="color: #000000;">因为买一赠一。</span>
