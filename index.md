@@ -13,11 +13,16 @@
     <script type="text/javascript" src="/Viz_AC_RunActiveContent.js"></script>
     <script type="text/javascript" src="/main.js"></script>
   </head>
+  <script type="text/javascript">
+      linkOfficial();
+      makeSpoilerLog();
+      flashWarning();
+    </script>
   <body>
     <div class="header">
       <span class="mspanav">
         <a href="/">Homestuck繁體中文翻譯</a>
-        <img src="D:\百度经验\Snipaste_2018-07-31_08-55-19.jpg" alt="百度"/>
+        <img src="https://www.homestuck.com/images/storyfiles/hs2/05979.gif">
         <a href="http://zhhomestuck.blogspot.com" style="color: #29ff4a;">Blogger站</a> |
         <a href="http://www.homestuck.com/" style="color: #29ff4a;">官方首頁</a>
         <img src="/images/candycorn.gif" />
