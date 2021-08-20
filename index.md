@@ -10,7 +10,7 @@
 <span style="color: #005682;">John：我抬起手说嗨</span>
 <div>
             <span class="">&gt;</span>
-            <a href="/story/2">==&gt; </a><br>
+            <a href="/0001">==&gt; </a><br>
           </div>
 <div class="pagefoot">
             
