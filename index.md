@@ -106,7 +106,7 @@
 <br>-- Caliborn嫌恶地把他的卡尔头盔丢在地上。 <br>
 
             
-              <span style="float: left;">&gt;&nbsp;</span><a id="newer-page-link" href="https://linzhiyi622.github.io/homestuckjz.GitHub.io/0001.html">  ==&gt;</a>
+              <span style="float: left;">&gt;&nbsp;</span><a id="newer-page-link" href="https://linzhiyi622.github.io/homestuckjz.GitHub.io/6022.html">  ==&gt;</a>
             
             <div id="pagefooter-option">
               
