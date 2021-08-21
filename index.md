@@ -103,7 +103,7 @@
 <br><span style="color: #000000">也许你应该试着变得开放一点。</span>
 <br><span style="color: #000000">你考没考虑过和什么人发展一段 <img src="/images/storyfiles/hs2/scraps/star-heart-horseshoe.png" border="0" /> 关系？</span>
 <br><span style="color: #000000">也许你会发现在与一只会跳舞的小精灵发展 <img src="/images/storyfiles/hs2/scraps/star-heart-horseshoe.png" border="0" /> 关系之前你根本没体会过什么叫做快乐。</span>
-<br>-- Caliborn嫌恶地把他的卡尔头盔丢在地上。 
+<br>-- Caliborn嫌恶地把他的卡尔头盔丢在地上。 <br>
 
             
               <span style="float: left;">&gt;&nbsp;</span><a id="newer-page-link" href="https://linzhiyi622.github.io/homestuckjz.GitHub.io/0001.html">  ==&gt;</a>
