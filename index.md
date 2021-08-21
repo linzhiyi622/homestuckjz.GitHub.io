@@ -101,8 +101,8 @@
 <br><span style="color: #000000">我猜，你现在回顾一下，紫帽子一直都很会调情是不是？</span>
 <br><span style="color: #2ed73a">什么？！</span>
 <br><span style="color: #000000">也许你应该试着变得开放一点。</span>
-<br><span style="color: #000000">你考没考虑过和什么人发展一段 <img src="/images/storyfiles/hs2/scraps/star-heart-horseshoe.png" border="0" /> 关系？</span>
-<br><span style="color: #000000">也许你会发现在与一只会跳舞的小精灵发展 <img src="/images/storyfiles/hs2/scraps/star-heart-horseshoe.png" border="0" /> 关系之前你根本没体会过什么叫做快乐。</span>
+<br><span style="color: #000000">你考没考虑过和什么人发展一段 <img src="https://www.homestuck.com/images/storyfiles/hs2/scraps/star-heart-horseshoe.png" border="0" /> 关系？</span>
+<br><span style="color: #000000">也许你会发现在与一只会跳舞的小精灵发展 <img src="https://www.homestuck.com/images/storyfiles/hs2/scraps/star-heart-horseshoe.png" border="0" /> 关系之前你根本没体会过什么叫做快乐。</span>
 <br>-- Caliborn嫌恶地把他的卡尔头盔丢在地上。 <br>
 
             
