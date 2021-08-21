@@ -1,17 +1,17 @@
 ﻿<html>
 
         <img src="https://www.homestuck.com/images/storyfiles/hs2/06019.gif">
-        <span style="color: #2ed73a">WAIT. WHY DID THAT PLANET GIVE ME TWO ELVES.</span>
-<br><span style="color: #000000">You're calling them elves now?</span>
-<br><span style="color: #2ed73a">YES.</span>
-<br><span style="color: #000000">But they're leprechauns!</span>
-<br><span style="color: #000000">Or gnomes, according to some baloneyscholars.</span>
-<br><span style="color: #2ed73a">THEY CAN NOW BE ADDITIONALLY REFERRED TO AS ELVES. I HAVE DECIDED.</span>
-<br><span style="color: #000000">Whatever.</span>
-<br><span style="color: #2ed73a">WHY ARE THERE TWO.</span>
-<br><span style="color: #000000">Because of the two for one deal.</span>
-<br><span style="color: #000000">You sunk the 7th planet on the break. So when you destroyed the 6th planet, you unlocked both the 6th and 7th elf.</span>
-<br><span style="color: #000000">Now you're on the 8th planet. This one doesn't give you an elf.</span>
+        <span style="color: #2ed73a">等会。为什么刚才那个星球给了我两个小精灵(ELVES)。</span>
+<br><span style="color: #000000">你管它们叫小精灵是吗？</span>
+<br><span style="color: #2ed73a">对啊。</span>
+<br><span style="color: #000000">可是它们是矮精灵诶！</span>
+<br><span style="color: #000000">或者小地精，用某些唬烂学者的话来说。</span>
+<br><span style="color: #2ed73a">那他们现在也可以被叫做小精灵了。这是我说的。</span>
+<br><span style="color: #000000">随你便吧。</span>
+<br><span style="color: #2ed73a">为什么这次是两个。</span>
+<br><span style="color: #000000">因为买一赠一。</span>
+<br><span style="color: #000000">你的第七颗星球已经被吸走了。所以当你摧毁第六颗的时候，你同时解锁了第六和第七两个小精灵。</span>
+<br><span style="color: #000000">现在你到了第八颗星球。这颗星球不会给你小精灵。</span>
 <br><span style="color: #2ed73a">IT DOESN'T.</span>
 <br><span style="color: #000000">No.</span>
 <br><span style="color: #2ed73a">WHAT ABOUT A GNOME.</span>
