@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<!--[if IE 9 ]>    <html dir="ltr" lang="en-US" class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en-US"><!--<![endif]-->
+<html>
+  <head>
+  <!-- application -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <meta charset="UTF-8">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"1b930da09b","applicationID":"65900267","transactionName":"cFkNREpaWA9dF0pBVlRTEB9LQVsRQQ==","queueTime":0,"applicationTime":6,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"1b930da09b",applicationID:"65900267"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1210.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Homestuck</title>
+    <meta name="description" content="A tale about a boy and his friends and a game they play together. About 8,000 pages. Don&#39;t say we didn&#39;t warn you.">
+    <script>
+//<![CDATA[
+var getGAEventLabel = function(){ return "Homestuck"; };
+//]]>
+</script>
+      <link rel="canonical" href="/story/6025">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#6bbe4a">
+<meta name="theme-color" content="#ffffff">
+
+      <link rel="stylesheet" href="https://use.typekit.net/kek1uwn.css">
+    <link rel="stylesheet" media="all" href="assets/main.css" />
+    <script src="assets/main.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-136373-45', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    <!-- //Connect Container: Homestuck-->
+  </head>
+  
+  <body
+    
+>
+
+    
+    <header id="site-header" role="banner">
+  <div id="header-container" class="o_story-page-header row flex pad-t-0 ">
+    <a href="javascript:void(0)" data-nav-open class="nav-btn nav-btn--center color-white" style="overflow-wrap:normal;text-decoration:none;"><i class="icon-menu"></i><span>Menu</span></a>
+    <nav id="nav-container" data-nav-state="closed" role="navigation" class="o_nav-container">
+      <a href="javascript:void(0)" data-nav-close class="nav-btn color-white pad-y-rg type-rg" style="overflow-wrap:normal;text-decoration:none;"><i class="icon-close"></i><span>Dismiss</span></a>
+      <ul id="primary-nav" class="o_primary-nav style-caps weight-bold disp-ib color-white type-rg">
+        <li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#29ff4a" href="/">HOME</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#39d5f6" href="/stories">READ</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#39d5f6" href="/info-story">INFO</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#f7f72a" href="/info-shop">SHOP</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#f7f72a" href="/info-games">GAMES</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#ffb529" href="/news">NEWS</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn"><a class="o_primary-nav-link" style="color:#ffb529"  href="/info-more">MORE</a></li>
+      </ul>
+    </nav>
+    <div id="site-search" class="o_site-search disp-ib">
+      <form action="/search" method="GET">
+        <input name="search" type="search" class="o_search-ac o_site-search-field" placeholder="" autocomplete="off">
+        <button class="o_site-search-btn"><i class="icon-search"></i></button>
+      </form>
+    </div>
+  </div>
+</header>
+    
+
+    <script>
+$(document).ready(function() {
+    // Make content area responsive during preload
+
+    var $content_container = $("#content_container");
+    var $anim_container    = $("#animation_container");
+    var $_preload_div_     = $("#_preload_div_");
+    var w = $anim_container.width(), h = $anim_container.height();
+    var iw = $content_container.width(), ih = $content_container.height();
+    var pw = $_preload_div_.width(), ih = $_preload_div_.height();
+    var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1, psRatio=1;;
+
+    if ($.browser.mobile === true) {
+      $anim_container.width(w*xRatio+'px');
+      $anim_container.height(h*xRatio+'px');
+    } else {
+      $_preload_div_.css('left', ((iw-(pw))/2)+'px');
+    }
+
+});
+
+</script>
+
+<div class="pos-r">
+
+  <div class="row bg-hs-gray bg-light-gray--md pad-0 pos-r">
+    <div id="content_container" class="pos-r mar-x-auto disp-bl bg-hs-gray" style="max-width:950px;">
+        <div >
+              <img src="https://www.homestuck.com/images/storyfiles/hs2/06407.gif" class="mar-x-auto disp-bl">
+        </div>
+    </div>
+  </div>
+  
+  <div class="row bg-hs-gray bg-light-gray--md pad-b-md pad-b-lg--md pos-r">
+    <div class="mar-x-auto disp-bl bg-hs-gray pad-t-lg" style="max-width:650px;">
+          <div class="type-center mar-x-0 mar-x-hs-md--md mar-b-hs-lg o_chat-container">
+ <button class="o_chat-log-btn">Show Dialoglog</button> 
+            <p class="o_chat-log type-left type-rg type-hs-small--md line-caption line-copy--md mar-t-md mar-t-md--md pad-x-md pad-x-hs-lg--md pad-b-md pad-b-md--md disp-n">
+            <span style="color: #b536da">ROSE: Why <span style="font-style: italic">am</span> I talking to myself?</span>
+<br><span style="color: #b536da">ROSE: I think I've spent too much time around Dave.</span>
+<br><span style="color: #b536da">ROSE: I've also probably spent too much time sharing his genes.</span>
+<br><span style="color: #b536da">ROSE: Why must our family tree be plagued by so many shameless soliloquists?</span>
+<br><span style="color: #b536da">ROSE: I wonder if our young parents are like this?</span>
+<br><span style="color: #b536da">ROSE: I wonder if I will ever find out?</span>
+<br><span style="color: #b536da">ROSE: And what should I do in the meantime?</span>
+<br><span style="color: #b536da">ROSE: Should I...</span>
+<br><span style="color: #b536da">ROSE: Should I really work on completing my personal planetary quest?</span>
+<br><span style="color: #b536da">ROSE: That whole thing where I learn to &quot;play the rain?&quot;</span>
+<br><span style="color: #b536da">ROSE: I guess I should feel exhilarated to have the chance again after all these years.</span>
+<br><span style="color: #b536da">ROSE: Of course I should.</span>
+<br><span style="color: #b536da">ROSE: But then,</span>
+<br><span style="color: #b536da">ROSE: Why does it sound like such a drag?</span>
+<br><span style="color: #b536da">ROSE: I haven't played the violin in a long time.</span>
+<br><span style="color: #b536da">ROSE: I wonder if I even remember how.</span>
+<br><span style="color: #b536da">ROSE: Honestly I can't recall ever feeling less motivated to satisfy a looming obligation.</span>
+<br><span style="color: #b536da">ROSE: I think my quest was fundamentally bound to the nature of this land, which was customized to the profile, needs, and potential for growth of a thirteen year-old girl.</span>
+<br><span style="color: #b536da">ROSE: But I'm not that person anymore.</span>
+<br><span style="color: #b536da">ROSE: What if I</span>
+<br><span style="color: #b536da">ROSE: What if I just</span>
+<br><span style="color: #b536da">ROSE: Didn't bother doing it?</span>
+<br><span style="color: #b536da">ROSE: Like, ever?</span>
+<br><span style="color: #b536da">ROSE: Would anyone notice my dereliction?</span>
+<br><span style="color: #b536da">ROSE: Would the powers that be strike me down where I loaf?</span>
+<br><span style="color: #b536da">ROSE: What if I just said fuck it?</span>
+<br><span style="color: #b536da">ROSE: What then, silly pink tortoise shells? Hmmmm??</span>
+<br><span style="color: #b536da">ROSE: </span>
+<br>
+<br><span style="color: #b536da">ROSE: I guess I should stop procrastinating and have This Conversation with Kanaya.</span></p>
+          </div>
+        <div class="o_story-nav type-hs-copy line-tight pad-x-0 pad-x-lg--md mar-b-lg">
+            <div>
+              <span class="">&gt;</span>
+              <a href="https://linzhiyi622.github.io/homestuckjz.GitHub.io/6411.html"
+                >[A6A6I1] ====&gt; </a><br>
+            </div>
+        </div>
+      
+<footer id="story-footer" role="banner">
+  <div id="story_footer_container" class="o_story-page-footer flex pad-t-0 pad-x-0
+     flex-justify 
+    ">
+      <div class="pad-l-lg--md mar-b-md type-hs-small type-hs-bottom--md type-center type-left--md">
+        <ul class="o_game-nav">
+          <li class="o_game-nav-item">
+            <a id="o_start-over"  href="/story/1">Start Over</a>
+          </li>
+            <li class="o_game-nav-item">
+              <a  href="/story/6024">Go Back</a>
+            </li>
+        </ul>
+      </div>
+      <script>
+//<![CDATA[
+$(document).ready(function() { Gamenav.checkAutosave(); });
+//]]>
+</script>
+      <nav id="gamenav-container" data-gamenav-state="closed" role="navigation" class="o_gamenav-container">
+        <a href="javascript:void(0)" data-gamenav-close class="nav-btn color-black pad-y-rg type-rg" style="text-decoration:none;"><i class="icon-close"></i><span>Dismiss</span></a>
+        <ul class="o_game-nav pad-r-lg--md o_game-options">
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.saveGame('story', 6025);">Save Game</a>
+            <i class="icon-tool-tip tooltip-target" data-tooltip aria-haspopup="true" 
+               title='If you have cookies enabled, you can save your spot in the story. Click "Save Game", then when you return to the site, click "Load Game" to return to where you were.'>
+            </i>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.autoSaveGame();">Auto-Save!</a>
+            <i class="icon-tool-tip tooltip-target" data-tooltip aria-haspopup="true" 
+               title='If you have cookies enabled, click this to automatically save your spot in the story wherever you go! When you return to the site later, it will automatically take you to where you left off. Pretty neat! 
+If this mode ever gets annoying though, remember you can just delete the cookies by clicking "Delete Game Data".'>
+            </i>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.loadGame();">Load&nbsp;Game</a>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.deleteGame();">Delete Game Data</a>
+          </li>
+        </ul>
+      </nav>
+    <a href="javascript:void(0)" data-gamenav-open class="nav-btn nav-btn--center type-hs-small mar-b-md" style="text-decoration:none; text-transform: none; font-size:14px; line-height:14px;"><span>Options</span> <i class="icon-menu" style="margin:0;"></i></a>
+  </div>
+</footer>
+
+  
+    </div>
+  </div>
+
+  
+</div>
+
+    
+<div class="o_site-footer row pos-r pad-t-rg pad-b-xl pad-b-0--md bg-dark-gray">
+  <div class="float-l"><img src="assets/footer_logo-a913b68f0efbaed8da48bc0a4f22b35d369f40d0e4db132013acbe6f26b3e37f.gif" alt="Footer logo" /><br></div>
+  <div class="float-r disp-n disp-bl--sm"><img src="assets/footer_logo-a913b68f0efbaed8da48bc0a4f22b35d369f40d0e4db132013acbe6f26b3e37f.gif" alt="Footer logo" /><br></div>
+  <div class="type-center pad-t-md--md">
+    <ul>
+      <li><a href="/contacts">Contacts</a></li>
+      <li><a href="/privacy">Privacy Policy</a></li>
+    </ul>
+    <div><span style="white-space:nowrap;">&copy; 2018 Homestuck</span> <span style="white-space:nowrap;">and VIZ Media</span></div>
+  </div>
+</div>
+
+
+
+    <div id="overlay"      data-overlay-state="off" class="o_overlay"></div>
+    <div id="game_overlay" data-game-overlay-state="off" class="o_game-overlay"></div>
+    <div id="overlay_wait" data-overlay-state="off" class="o_overlay-wait"></div>
+
+
+
+  </body>
+</html>
