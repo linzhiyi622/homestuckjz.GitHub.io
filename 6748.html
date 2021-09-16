@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<!--[if IE 9 ]>    <html dir="ltr" lang="en-US" class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en-US"><!--<![endif]-->
+<html>
+  <head>
+  <!-- application -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <meta charset="UTF-8">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"1b930da09b","applicationID":"65900267","transactionName":"cFkNREpaWA9dF0pBVlRTEB9LQVsRQQ==","queueTime":0,"applicationTime":6,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"1b930da09b",applicationID:"65900267"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1210.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Homestuck</title>
+    <meta name="description" content="A tale about a boy and his friends and a game they play together. About 8,000 pages. Don&#39;t say we didn&#39;t warn you.">
+    <script>
+//<![CDATA[
+var getGAEventLabel = function(){ return "Homestuck"; };
+//]]>
+</script>
+      <link rel="canonical" href="/story/6025">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#6bbe4a">
+<meta name="theme-color" content="#ffffff">
+
+      <link rel="stylesheet" href="https://use.typekit.net/kek1uwn.css">
+    <link rel="stylesheet" media="all" href="assets/main.css" />
+    <script src="assets/main.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-136373-45', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    <!-- //Connect Container: Homestuck-->
+  </head>
+  
+  <body
+    
+>
+
+    
+    <header id="site-header" role="banner">
+  <div id="header-container" class="o_story-page-header row flex pad-t-0 ">
+    <a href="javascript:void(0)" data-nav-open class="nav-btn nav-btn--center color-white" style="overflow-wrap:normal;text-decoration:none;"><i class="icon-menu"></i><span>Menu</span></a>
+    <nav id="nav-container" data-nav-state="closed" role="navigation" class="o_nav-container">
+      <a href="javascript:void(0)" data-nav-close class="nav-btn color-white pad-y-rg type-rg" style="overflow-wrap:normal;text-decoration:none;"><i class="icon-close"></i><span>Dismiss</span></a>
+      <ul id="primary-nav" class="o_primary-nav style-caps weight-bold disp-ib color-white type-rg">
+        <li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#29ff4a" href="/">HOME</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#39d5f6" href="/stories">READ</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#39d5f6" href="/info-story">INFO</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#f7f72a" href="/info-shop">SHOP</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#f7f72a" href="/info-games">GAMES</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#ffb529" href="/news">NEWS</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn"><a class="o_primary-nav-link" style="color:#ffb529"  href="/info-more">MORE</a></li>
+      </ul>
+    </nav>
+    <div id="site-search" class="o_site-search disp-ib">
+      <form action="/search" method="GET">
+        <input name="search" type="search" class="o_search-ac o_site-search-field" placeholder="" autocomplete="off">
+        <button class="o_site-search-btn"><i class="icon-search"></i></button>
+      </form>
+    </div>
+  </div>
+</header>
+    
+
+    <script>
+$(document).ready(function() {
+    // Make content area responsive during preload
+
+    var $content_container = $("#content_container");
+    var $anim_container    = $("#animation_container");
+    var $_preload_div_     = $("#_preload_div_");
+    var w = $anim_container.width(), h = $anim_container.height();
+    var iw = $content_container.width(), ih = $content_container.height();
+    var pw = $_preload_div_.width(), ih = $_preload_div_.height();
+    var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1, psRatio=1;;
+
+    if ($.browser.mobile === true) {
+      $anim_container.width(w*xRatio+'px');
+      $anim_container.height(h*xRatio+'px');
+    } else {
+      $_preload_div_.css('left', ((iw-(pw))/2)+'px');
+    }
+
+});
+
+</script>
+
+<div class="pos-r">
+
+  <div class="row bg-hs-gray bg-light-gray--md pad-t-md--md pos-r">
+    <div id="content_container" class="pos-r mar-x-auto disp-bl bg-hs-gray" style="max-width:650px;">
+        <h2 class="pad-t-md pad-x-lg--md type-center type-hs-header line-tight">[A6A6I2] ====&gt;</h2>
+        <div class="pad-t-md">
+              <img src="https://www.homestuck.com/images/storyfiles/hs2/06745.gif" class="mar-x-auto disp-bl">
+        </div>
+    </div>
+  </div>
+  
+  <div class="row bg-hs-gray bg-light-gray--md pad-b-md pad-b-lg--md pos-r">
+    <div class="mar-x-auto disp-bl bg-hs-gray pad-t-lg" style="max-width:650px;">
+          <div class="type-center mar-x-0 mar-x-hs-md--md mar-b-hs-lg o_chat-container">
+ <button class="o_chat-log-btn">Show Dialoglog</button> 
+            <p class="o_chat-log type-left type-rg type-hs-small--md line-caption line-copy--md mar-t-md mar-t-md--md pad-x-md pad-x-hs-lg--md pad-b-md pad-b-md--md disp-n">
+              <span style="color: #77003c">MEENAH：你确定吗</span>
+<br><span style="color: #005682">VRISKA：这简直尬死了！</span>
+<br><span style="color: #005682">VRISKA：每当我想到她任性的功绩时我都尬到发抖。</span>
+<br><span style="color: #77003c">MEENAH：嗯哼</span>
+<br><span style="color: #005682">VRISKA: VRISKA：难道她意识不到这种努力永远不会有结果吗？</span>
+<br><span style="color: #005682">VRISKA：你不能用最傻逼的方式把自己挤进大动作的中央就因为你不能再忍受一秒聚光灯柱之外的生活。</span>
+<br><span style="color: #005682">VRISKA：任何这么做的人都不会有好结果。</span>
+<br><span style="color: #005682">VRISKA：更糟的是最后你会发现自己像个智障。</span>
+<br><span style="color: #005682">VRISKA：更更更糟的是你稍微联想一下就会发现我就是那个智障！</span>
+<br><span style="color: #005682">VRISKA：为什么她不能再多动脑子想想？</span>
+<br><span style="color: #005682">VRISKA：为什么她不能至少先和我们说一声？</span>
+<br><span style="color: #77003c">MEENAH：那我只好耸肩咯，哟</span>
+<br><span style="color: #005682">VRISKA：为什么连我都理解了她却理解不了？</span>
+<br><span style="color: #005682">VRISKA：她都比我大多少岁了？</span>
+<br><span style="color: #005682">VRISKA：梦境泡泡里的几百亿个行星周？</span>
+<br><span style="color: #005682">VRISKA：她积累了那么多的经验和智慧，现在却像个傻逼一样跑到外面瞎扑腾。</span>
+<br><span style="color: #77003c">MEENAH：（扑腾）</span>
+<br><span style="color: #005682">VRISKA：这真的太让我心痛了。她太想当女侯爵了，就像从前的我一样。</span>
+<br><span style="color: #005682">VRISKA：但是她一点也不像她！</span>
+<br><span style="color: #005682">VRISKA：你需要积累他妈成吨的经验，关于……很多残忍的海盗行当，然后你才能真正扬帆启航？</span>
+<br><span style="color: #005682">VRISKA：你不能在当了一辈子的自闭书呆子之后突然决定打开混蛋开关，然后指望别人把你当回事。</span>
+<br><span style="color: #005682">VRISKA：而且，想要真正达成那些成就，或许长大成他妈的年才更有帮助一些。</span>
+<br><span style="color: #005682">VRISKA：我知道给出这种建议的我肯定是疯了但是也许，只是也许，有些特定的角色和行为就是最好留给完全长大的成年人去做！</span>
+<br><span style="color: #005682">VRISKA：我不是要故意扫兴，但是我祖先的日记真的有非常成人的内容！</span>
+<br><span style="color: #005682">VRISKA：所以现在我们又有了一个试图追上传奇海盗女皇的靴子印的傻屁孩，而且又是一个纯外行在胡闹。</span>
+<br><span style="color: #005682">VRISKA：我在她身上看到的完全就是我以前........</span>
+<br><span style="color: #005682">VRISKA：这简直让我........</span>
+<br><span style="color: #005682">VRISKA：啊啊啊啊啊啊啊啊！</span>
+<br><span style="color: #77003c">MEENAH：你不要一生气就扭来扭去</span>
+<br><span style="color: #77003c">MEENAH：你把我编好的都弄乱了</span>
+<br><span style="color: #005682">VRISKA：对不起。</span>
+<br><span style="color: #005682">VRISKA：我只是被她的行为背后的某些暗喻弄得很沮丧。</span>
+<br><span style="color: #005682">VRISKA：我过去弄出这种狗屁的时候也是这样的吗？</span>
+<br><span style="color: #77003c">MEENAH：不知道，我又不在场</span>
+<br><span style="color: #005682">VRISKA：我有一种恶心的预感那就是我就和她一个样。</span>
+<br><span style="color: #005682">VRISKA：难怪没有人能受得了我。</span>
+<br><span style="color: #005682">VRISKA：结果我又在这里对我的祖先逼逼个没完就好像我懂得比她多似的，就好像我已经超越了这种阶段。</span>
+<br><span style="color: #005682">VRISKA：然而........</span>
+<br><span style="color: #005682">VRISKA：我真的超越了吗？</span>
+<br><span style="color: #005682">VRISKA：我是不是正在自以为自己比过去聪明得多，实际上却在不知不觉中重蹈了所有的覆辙？</span>
+<br><span style="color: #005682">VRISKA：寻找宝藏、建立军队的计划是否又是我的一场幼稚自私的胡闹，只不过伪装成了一个更具“战略意义”的计划？</span>
+<br><span style="color: #005682">VIRSKA：如果我一直用这些胡说八道自欺欺人，我又怎么可能判断这两者之间的区别？</span>
+<br><span style="color: #005682">VRISKA：我想她的愚蠢行为中最让我痛恨的不是她的计划有多烂，或者我们不在她的计划之中。</span>
+<br><span style="color: #005682">VRISKA：而是她让我开始怀疑我还能不能相信我自己做出的判断，即使那已经是那么久之前的往事。</span>
+<br><span style="color: #77003c">MEENAH：不错的自我反省，serk</span>
+<br><span style="color: #005682">VRISKA：我不知道。</span>
+<br><span style="color: #005682">VRISKA：如果它真的还不错，为什么我还是觉得我烂透了？</span>
+<br><span style="color: #77003c">MEENAH：我想那是因为自我反省就是这样的东西</span>
+<br><span style="color: #77003c">MEENAH：不过是</span>
+<br><span style="color: #77003c">MEENAH：暂时的？</span>
+<br><span style="color: #005682">VRISKA：我猜是吧。</span>
+<br><span style="color: #005682">VRISKA：那你呢？</span>
+<br><span style="color: #005682">VRISKA：这些思考对你来说算什么？</span>
+<br><span style="color: #005682">VRISKA：我知道你曾经在你的朋友之间惹过不少大麻烦。</span>
+<br><span style="color: #005682">VRISKA：你肯定做过一些非常过分的事情，同时坚信为了团队的利益你不得不那么做。如果现在让你回顾那些事情，你会不会无法理解当时的你究竟在想什么？或者你会不会怀疑你其实根本没有进步过？</span>
+<br><span style="color: #77003c">MEENAH：从不</span>
+<br><span style="color: #005682">VRISKA：噢，拜托。</span>
+<br><span style="color: #005682">VRISKA：不要把我一个人丢在自我怀疑的地狱边缘。</span>
+<br><span style="color: #005682">VRISKA：给我讲点什么，Peixes。</span>
+<br><span style="color: #77003c">MEENAH：哈哈</span>
+<br><span style="color: #77003c">MEENAH：也许我根本不知道？？</span>
+<br><span style="color: #77003c">MEENAH：你看，我就只是</span>
+<br><span style="color: #77003c">MEENAH：我不会像serket家的女孩一样用我的疯狂计划折磨自己</span>
+<br><span style="color: #77003c">MEENAH：反正这套在我这行得通</span>
+<br><span style="color: #77003c">MEENAH：也许我是犯过一些错误吧，但是说真的谁在乎呢</span>
+<br><span style="color: #005682">VRISKA：你不在乎你犯没犯错？</span>
+<br><span style="color: #77003c">MEENAH：反正和你还有她不一样</span>
+<br><span style="color: #77003c">MEENAH：aranea的问题是</span>
+<br><span style="color: #77003c">MEENAH：她现在的行为和她过去的行事方式没什么不同</span>
+<br><span style="color: #77003c">MEENAH：她做事的重点从来都和她做的事本身无关</span>
+<br><span style="color: #77003c">MEENAH：她真正在意的是她做的事有什么*意义*和确保每一个人都知道它们的意义</span>
+<br><span style="color: #77003c">MEENAH：而在那之上更重要的是确保每一个人都清楚她有多重要，因为显然她才是一切意义的关键源头，没有她，所有的行动都将失去意义，对吧？</span>
+<br><span style="color: #77003c">MEENAH：但我不这样想</span>
+<br><span style="color: #77003c">MEENAH：我就只是</span>
+<br><span style="color: #77003c">MEENAH：去干烂事</span>
+<br><span style="color: #77003c">MEENAH：而我干的所有烂事</span>
+<br><span style="color: #77003c">MEENAH：只意味着烂事本身造就的烂结果</span>
+<br><span style="color: #77003c">MEENAH：如果烂事造就了非常傻逼的结果</span>
+<br><span style="color: #77003c">MEENAH：我猜那就是你所说的犯错，所以哦我去他妈的</span>
+<br><span style="color: #77003c">MEENAH：犯错不会让我觉得特别难受，因为我根本不把得到的结果和我的自我价值关联在一起</span>
+<br><span style="color: #77003c">MEENAH：你能懂了吗</span>
+<br><span style="color: #005682">VRISKA：嗯。</span>
+<br><span style="color: #005682">VRISKA：着实很有道理。</span>
+<br><span style="color: #005682">VRISKA：如果你在很久以前问我这个问题，我肯定会坚持说我也正是这么看待我做过的每一件事的。</span>
+<br><span style="color: #005682">VRISKA：但现在我再也不知道那是不是一句真话了。</span>
+<br><span style="color: #005682">VRISKA：事实上，我甚至能肯定地说那不是真的。</span>
+<br><span style="color: #005682">VRISKA：我总是全身心地投入到我所造成的一切结果，和这些结果为我的形象增添了什么中去。</span>
+<br><span style="color: #005682">VRISKA：尤其是它们对我的自我印象有何影响。</span>
+<br><span style="color: #77003c">MEENAH：好吧我还是得承认</span>
+<br><span style="color: #77003c">MEENAH：我总是为那些让我少赚金子的决定感到超级难过</span>
+<br><span style="color: #77003c">MEENAH：他妈的</span>
+<br><span style="color: #77003c">MEENAH：光是想想破产我就感到有一股耻辱之潮向我涌来</span>
+<br><span style="color: #005682">VRISKA：是啊当然。</span>
+<br><span style="color: #005682">VRISKA：谁他妈想变穷啊？</span>
+<br><span style="color: #005682">VRISKA：只有卢瑟。</span>
+<br><span style="color: #77003c">MEENAH：是啊</span></p>
+          </div>
+        <div class="o_story-nav type-hs-copy line-tight pad-x-0 pad-x-lg--md mar-b-lg">
+            <div>
+              <span class="">&gt;</span>
+              <a href="https://linzhiyi622.github.io/homestuckjz.GitHub.io/6749.html"
+                >[A6A6I2] ====> </a><br>
+            </div>
+        </div>
+      
+<footer id="story-footer" role="banner">
+  <div id="story_footer_container" class="o_story-page-footer flex pad-t-0 pad-x-0
+     flex-justify 
+    ">
+      <div class="pad-l-lg--md mar-b-md type-hs-small type-hs-bottom--md type-center type-left--md">
+        <ul class="o_game-nav">
+          <li class="o_game-nav-item">
+            <a id="o_start-over"  href="/story/1">Start Over</a>
+          </li>
+            <li class="o_game-nav-item">
+              <a  href="/story/6024">Go Back</a>
+            </li>
+        </ul>
+      </div>
+      <script>
+//<![CDATA[
+$(document).ready(function() { Gamenav.checkAutosave(); });
+//]]>
+</script>
+      <nav id="gamenav-container" data-gamenav-state="closed" role="navigation" class="o_gamenav-container">
+        <a href="javascript:void(0)" data-gamenav-close class="nav-btn color-black pad-y-rg type-rg" style="text-decoration:none;"><i class="icon-close"></i><span>Dismiss</span></a>
+        <ul class="o_game-nav pad-r-lg--md o_game-options">
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.saveGame('story', 6025);">Save Game</a>
+            <i class="icon-tool-tip tooltip-target" data-tooltip aria-haspopup="true" 
+               title='If you have cookies enabled, you can save your spot in the story. Click "Save Game", then when you return to the site, click "Load Game" to return to where you were.'>
+            </i>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.autoSaveGame();">Auto-Save!</a>
+            <i class="icon-tool-tip tooltip-target" data-tooltip aria-haspopup="true" 
+               title='If you have cookies enabled, click this to automatically save your spot in the story wherever you go! When you return to the site later, it will automatically take you to where you left off. Pretty neat! 
+If this mode ever gets annoying though, remember you can just delete the cookies by clicking "Delete Game Data".'>
+            </i>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.loadGame();">Load&nbsp;Game</a>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.deleteGame();">Delete Game Data</a>
+          </li>
+        </ul>
+      </nav>
+    <a href="javascript:void(0)" data-gamenav-open class="nav-btn nav-btn--center type-hs-small mar-b-md" style="text-decoration:none; text-transform: none; font-size:14px; line-height:14px;"><span>Options</span> <i class="icon-menu" style="margin:0;"></i></a>
+  </div>
+</footer>
+
+  
+    </div>
+  </div>
+
+  
+</div>
+
+    
+<div class="o_site-footer row pos-r pad-t-rg pad-b-xl pad-b-0--md bg-dark-gray">
+  <div class="float-l"><img src="assets/footer_logo-a913b68f0efbaed8da48bc0a4f22b35d369f40d0e4db132013acbe6f26b3e37f.gif" alt="Footer logo" /><br></div>
+  <div class="float-r disp-n disp-bl--sm"><img src="assets/footer_logo-a913b68f0efbaed8da48bc0a4f22b35d369f40d0e4db132013acbe6f26b3e37f.gif" alt="Footer logo" /><br></div>
+  <div class="type-center pad-t-md--md">
+    <ul>
+      <li><a href="/contacts">Contacts</a></li>
+      <li><a href="/privacy">Privacy Policy</a></li>
+    </ul>
+    <div><span style="white-space:nowrap;">&copy; 2018 Homestuck</span> <span style="white-space:nowrap;">and VIZ Media</span></div>
+  </div>
+</div>
+
+
+
+    <div id="overlay"      data-overlay-state="off" class="o_overlay"></div>
+    <div id="game_overlay" data-game-overlay-state="off" class="o_game-overlay"></div>
+    <div id="overlay_wait" data-overlay-state="off" class="o_overlay-wait"></div>
+
+
+
+  </body>
+</html>
