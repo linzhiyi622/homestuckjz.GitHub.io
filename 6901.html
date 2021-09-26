@@ -110,10 +110,18 @@ $(document).ready(function() {
 
   <div class="row bg-a6a6-mid-green bg-a6a6-light-green--md pad-t-md--md pos-r">
     <div id="content_container" class="pos-r mar-x-auto disp-bl bg-a6a6-mid-green" style="max-width:650px;">
-                <h2 class="pad-t-md pad-x-lg--md type-center type-hs-header line-tight">[S]GAME OVER.</h2>
-        <div class="pad-t-md">
-              <img src="assets/flash_page_note.png" class="mar-x-auto disp-bl">
-        </div>
+        <h2 class="pad-t-md pad-x-lg--md type-center type-hs-header line-tight">[S] GAME OVER.</h2>
+        <div class="pos-r pad-t-md">
+          <div id="animation_container" class="bg-a6a6-mid-green" style="width:650px; 
+            height:567px;">
+            <canvas id="canvas" width="650" height="450" style="position: absolute; display: none;"></canvas>
+            <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:650px; height:450px; position: absolute; left: 0px; top: 0px; display: none;">
+            </div>
+            <iframe class="markdown-player" 
+  
+src="//player.bilibili.com/player.html?aid=9643757&p=7&amp;high_quality=0&amp;danmaku=1&amp;as_wide=0" 
+  
+width="100%" height="100%" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
       
     </div>
   </div>
