@@ -112,7 +112,12 @@ $(document).ready(function() {
   <div class="row bg-a6a6-mid-green bg-a6a6-light-green--md pad-t-md--md pos-r">
     <div id="content_container" class="pos-r mar-x-auto disp-bl bg-a6a6-mid-green" style="max-width:650px;">
                 <h2 class="pad-t-md pad-x-lg--md type-center type-hs-header line-tight">啊。你能回到我的身边真是太好了。</h2>
-        <div class="pad-t-md">
+        <div class="pos-r pad-t-md">
+          <div id="animation_container" class="bg-a6a6-mid-green" style="width:650px; 
+            height:567px;">
+            <canvas id="canvas" width="650" height="450" style="position: absolute; display: none;"></canvas>
+            <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:650px; height:450px; position: absolute; left: 0px; top: 0px; display: none;">
+            </div>
               <object width="650" height="450"
 classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
 codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#4,0,0,0">
