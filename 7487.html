@@ -1,0 +1,486 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9 ]>    <html dir="ltr" lang="en-US" class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en-US"><!--<![endif]-->
+<html>
+  <head>
+  <!-- application -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <meta charset="UTF-8">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"1b930da09b","applicationID":"65900267","transactionName":"cFkNREpaWA9dF0pBVlRTEB9LQVsRQQ==","queueTime":0,"applicationTime":5,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"1b930da09b",applicationID:"65900267"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1210.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Homestuck</title>
+    <meta name="description" content="A tale about a boy and his friends and a game they play together. About 8,000 pages. Don&#39;t say we didn&#39;t warn you.">
+    <script>
+//<![CDATA[
+var getGAEventLabel = function(){ return "Homestuck"; };
+//]]>
+</script>
+      <link rel="canonical" href="/story/90">
+
+          <script src="/assets/createjs.min-8a3c3e7a3d0a0049630c829b71652833e827ec837da2506b4503fcfb670e1bc9.js"></script>
+          <script src="/assets/glowfilter.min-b2d71dc70203d784635ec4f157fda31b5943155a18a74ff44454ea61c1a6b17a.js"></script>
+          <script src="/assets/gsap/plugins/EaselPlugin.min-7b39add3c5d5c9595472a80179ed328187f31ceff2eac646d66a9dcff2797fa0.js"></script>
+          <script src="/assets/gsap/TweenLite.min-5e942b2a54af3190383c2b0af228108e9aa0d9a18486fe6305c0d7c79e462c07.js"></script>
+          <script src="/assets/hs2/00090-b67f41efa2a52791890ee6e8c9230be33321fcfab95ab4d09cce1c01ce45fada.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#6bbe4a">
+<meta name="theme-color" content="#ffffff">
+
+      <link rel="stylesheet" href="https://use.typekit.net/kek1uwn.css">
+    <link rel="stylesheet" media="all" href="assets/main.css" />
+    <script src="assets/main.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-136373-45', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </head>
+  
+  <body
+    
+      onload="init();"
+    >
+
+    
+    <header id="site-header" role="banner">
+  <div id="header-container" class="o_story-page-header row flex pad-t-0 ">
+    <a href="javascript:void(0)" data-nav-open class="nav-btn nav-btn--center color-white" style="overflow-wrap:normal;text-decoration:none;"><i class="icon-menu"></i><span>Menu</span></a>
+    <nav id="nav-container" data-nav-state="closed" role="navigation" class="o_nav-container">
+      <a href="javascript:void(0)" data-nav-close class="nav-btn color-white pad-y-rg type-rg" style="overflow-wrap:normal;text-decoration:none;"><i class="icon-close"></i><span>Dismiss</span></a>
+      <ul id="primary-nav" class="o_primary-nav style-caps weight-bold disp-ib color-white type-rg">
+        <li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#29ff4a" href="/">HOME</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#39d5f6" href="/stories">READ</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#39d5f6" href="/info-story">INFO</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#f7f72a" href="/info-shop">SHOP</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#f7f72a" href="/info-games">GAMES</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#ffb529" href="/news">NEWS</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn"><a class="o_primary-nav-link" style="color:#ffb529"  href="/info-more">MORE</a></li>
+      </ul>
+    </nav>
+    <div id="site-search" class="o_site-search disp-ib">
+      <form action="/search" method="GET">
+        <input name="search" type="search" class="o_search-ac o_site-search-field" placeholder="" autocomplete="off">
+        <button class="o_site-search-btn"><i class="icon-search"></i></button>
+      </form>
+    </div>
+  </div>
+</header>
+    
+
+    <script>
+$(document).ready(function() {
+    // Make content area responsive during preload
+
+    var $content_container = $("#content_container");
+    var $anim_container    = $("#animation_container");
+    var $_preload_div_     = $("#_preload_div_");
+    var w = $anim_container.width(), h = $anim_container.height();
+    var iw = $content_container.width(), ih = $content_container.height();
+    var pw = $_preload_div_.width(), ih = $_preload_div_.height();
+    var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1, psRatio=1;;
+
+    if ($.browser.mobile === true) {
+      $anim_container.width(w*xRatio+'px');
+      $anim_container.height(h*xRatio+'px');
+    } else {
+      $_preload_div_.css('left', ((iw-(pw))/2)+'px');
+    }
+
+});
+
+</script>
+
+<div class="pos-r">
+
+  <div class="row bg-hs-gray bg-light-gray--md pad-t-md--md pos-r">
+    <div id="content_container" class="pos-r mar-x-auto disp-bl bg-hs-gray" style="max-width:650px;">
+        <h2 class="pad-t-md pad-x-lg--md type-center type-hs-header line-tight">[A6A6I5] ====&gt;</h2>
+        <div class="pad-t-md">
+              <img src="https://www.homestuck.com/images/storyfiles/hs2/07483.gif" class="mar-x-auto disp-bl">
+        </div>
+         
+          </div>
+      </div>
+<script>
+  if (!anchorSlot) {
+    googletag.cmd.push(function() {
+      googletag.display(staticSlot);
+    });
+  }
+</script>
+
+    </div>
+  </div>
+  
+  <div class="row bg-hs-gray bg-light-gray--md pad-b-md pad-b-lg--md pos-r">
+    <div class="mar-x-auto disp-bl bg-hs-gray pad-t-lg" style="max-width:650px;">
+          <div class="type-center mar-x-0 mar-x-hs-md--md mar-b-hs-lg o_chat-container">
+ <button class="o_chat-log-btn">Show Dialoglog</button> 
+            <p class="o_chat-log type-left type-rg type-hs-small--md line-caption line-copy--md mar-t-md mar-t-md--md pad-x-md pad-x-hs-lg--md pad-b-md pad-b-md--md disp-n"><span style="color: #0715cd">JOHN：那就给我讲讲你们离谱的陨石旅行吧！</span>
+<br><span style="color: #e00707">DAVE：嗯</span>
+<br><span style="color: #0715cd">JOHN：当我们在坏时间线里的草坡星球上团圆时，那条时间线的dave给我讲了很多好玩的故事。<br>
+JOHN：但我们的团圆没有持续太久，所以我听到的内容不多。<br>
+JOHN：而且我几乎可以确定那个vriska没有活着走完他们的三年旅程。
+</span>
+<br><span style="color: #e00707">DAVE：噢好吧那么我告诉你<br>
+DAVE：毫无疑问vriska在这条时间线里还活着<br>
+DAVE：几乎可以说<br>
+DAVE：比活着还活跃，如果真的可以这么形容的话
+</span>
+<br><span style="color: #0715cd">JOHN：哈哈。<br>
+JOHN：我想我明白你的意思。<br>
+JOHN：当她还是个鬼魂的时候，我曾和她相处了一段时间，那时，呃……<br>
+JOHN：这么说吧，无论她是生是死，她总是能让人很难忽视她的存在。
+</span>
+<br><span style="color: #626262">KARKAT：对。太对了！<br>
+KARKAT：我就爱听这个。<br>
+KARKAT：我们可以把我们的怀旧闲谈压低到刚刚能听见的音量然后说死VRISKA吗？
+</span>
+<br><span style="color: #005682">VRISKA：刚刚能听见？<br>
+VRISKA：KARKAT，你的音量设置是八是只有一个档位啊。
+</span>
+<br><span style="color: #626262">KARKAT：哇噢，操你妈？！</span>
+<br><span style="color: #e00707">DAVE：好了哥们我们还是不要把宝贵的哥们时间用来逼逼serket好吗，哪怕就看在你完全没法避免被像刚才那样骂个狗血淋头的份上</span>
+<br><span style="color: #626262">KARKAT：真是操操操操操操你妈的太对了。<br>
+KARKAT：对，你说得对。<br>
+KARKAT：好的，我冷静了，你说得对DAVE，你一直都对。
+</span>
+<br><span style="color: #0715cd">JOHN：哇哦。<br>
+JOHN：karkat，作为一个主要在搞笑的鬼叫哥，你退缩得未免也太快了。<br>
+JOHN：我几乎……有点儿失望？<br>
+JOHN：我还在等着你表演更多的专利级疯狂咆哮呢！
+</span>
+<br><span style="color: #626262">KARKAT：嘿，JOHN•操你妈的•BERT，我要让你知道我已经比上次你见到的那个我更成熟讲理了。<br>
+KARKAT：而且我比那个单音量咆哮海绵先生好了不止一点，任何对此结论心存异议的人都可以真挚友好地邀请我把他们肮脏的种瓣当作打折口琴吹个痛快。
+</span>
+<br><span style="color: #0715cd">JOHN：哦，好的，我信。</span>
+<br><span style="color: #626262">KARKAT：但我也要真诚地说，终于见到你确实很酷。我是说，在一个更文明礼貌讲理的状态下。<br>
+KARKAT：不像三年前你一拳打晕了VRISKA然后把你那脆弱的屁股塞进他妈的时空连续体的那次*操他妈*的狗屁短暂会面。<br>
+KARKAT：我知道当时我看起来一定特别很生气，谁知道那是因为什么原因。<br>
+KARKAT：但是我实话告诉你，我在陨石上度过了太太太他妈漫长的无聊时光所以一点儿都不想花半分钟的时间去回顾将近一万种我他妈一点儿都不鸟的随便什么傻逼扭曲命运。
+</span>
+<br><span style="color: #0715cd">JOHN：哈哈好吧，也行？</span>
+<br><span style="color: #626262">KARKAT：我已经完全受够了。<br>
+KARKAT：我已经完全告别了很多事情。
+</span>
+<br><span style="color: #0715cd">JOHN：……是吗？</span>
+<br><span style="color: #626262">KARKAT：是的。<br>
+KARKAT：比如说，还记得我过去还会隔着电脑对你大喊大叫吗。<br>
+KARKAT：那时候的我可能还会对这次团聚感到紧张或者尴尬。<br>
+KARKAT：因为……呃，你知道的原因。
+</span>
+<br><span style="color: #0715cd">JOHN：不我不知？</span>
+<br><span style="color: #626262">KARKAT：我只是短暂地在你身上动了一点点感情而且用了一种非常混乱的非时序的方式去和你搭讪，而那时我甚至没有意识到我把我的支撑荚向自己的发声通道里捅了多深。</span>
+<br><span style="color: #e00707">DAVE：老兄啊</span>
+<br><span style="color: #626262">KARKAT：我是说，直到你慈悲而且不得不说相当给面子地让我闭嘴为止。<br>
+KARKAT：你不记得了吗？
+</span>
+<br><span style="color: #0715cd">JOHN：呃……</span>
+<br><span style="color: #0715cd">JOHN: 也许？</span>
+<br><span style="color: #626262">KARKAT：你怎么连这种事情都能忘？</span>
+<br><span style="color: #0715cd">JOHN：我不知道，那都是很久很久以前的事了！<br>
+JOHN：而且我们进行的可笑的对话真的很多……
+</span>
+<br><span style="color: #626262">KARKAT：行吧，也许这事对我的影响比对你的大得多。<br>
+KARKAT：我是说，事实*很显然*就是这样，这差不多就是我要说的重点。<br>
+KARAKT：但是*真正*的问题是，或者我*想要*表达的是，它*再也*不是什么大不了的事了。<br>
+KARKAT：因为它已经玩儿完了！
+</span>
+<br><span style="color: #e00707">DAVE：karkat你他妈的在干什么</span>
+<br><span style="color: #626262">KARKAT：什么干什么！<br>
+KARKAT：我在说话，我在非常随便地说一大堆无关紧要的狗屎废话。<br>
+KARKAT：而我要说的*重点*是它们再也不重要了，所以我就只是随便那么一说！老天。
+</span>
+<br><span style="color: #e00707">DAVE：好的我不是说这个对话发生得有多不合情理但是<br>
+DAVE：我们才刚开始和朋友探讨昔日的趣闻以便让大家互相了解最新情况之类的<br>
+DAVE：你怎么就已经开着卡车往外运枪了
+</span>
+<br><span style="color: #626262">KARKAT：枪？什么枪！</span>
+<br><span style="color: #e00707">DAVE：我只想说，如果你一边复读这很随便而且无关紧要的啦欧耶什么的，一边时隔三年刚见到john就他妈的把这一切脱口而出，那么你听起来也没那么随便而且满不在乎。</span>
+<br><span style="color: #626262">KARKAT：对不起！<br>
+KARKAT：我真他妈的超级抱歉。我忘了在我的判断半径内还有这么一堆圆润醒目的披着披风的屎！
+</span>
+<br><span style="color: #0715cd">JOHN：不我是说，我想我还是能记起来的。<br>
+JOHN：我记得你当时，呃，大概是和我“昏暗调情”了一点点之类的，但是你是逆着时间线找我的而且还一直在咆哮。<br>
+JOHN：那时我甚至不太知道那个词是什么意思。<br>
+JOHN：然后我告诉你我不是同性恋所以这么做没什么意义，不过那时候你也不知道同性恋是什么意思？
+</span>
+<br><span style="color: #626262">KARKAT：对！<br>
+KARKAT：基本上事情就是这么发生的<br>
+KARKAT：那正是我*试图*告诉你我已经受够了而且现在再也不算数了的东西，结果现在它又变得举足轻重了我猜？<br>
+KARKAT：真是太他妈的棒了！谢谢你啊DAVE！
+</span>
+<br><span style="color: #e00707">DAVE：呦你看，其实现在基本上轮不到我在这里插话，因为我他妈就是一个间歇性喷发可笑的自我折磨的弗洛伊德式丑角<br>
+DAVE：在这一点上我甚至不能假装有意隐瞒我身上的任何一种狗屎特性，因为我知道我迟早会在一次精彩独白中极其丢人地屁股朝后摔出一个尴尬的全盘招供而那时我就只好说嗯是的好吧……好吧没错那确实是我的狗屎烂蛋，我就是这样的狗屎烂蛋，所以让我们继续过我们他妈的生活吧<br>
+DAVE：所以john刚说完说嘿老兄你就在弹夹里上满了你对他是如何的“没感觉”的子弹然后像再明显不过的过度抗议一样叭叭叭地说个不停然后所有人就都知道你的小心思了，总之我实在看不出假装那一切从未发生到底如何能挽回你的任何尊严或者随便什么东西
+</span>
+<br><span style="color: #626262">KARKAT：我的操你妈的老天……</span>
+<br><span style="color: #e00707">DAVE：所以我想说的就是如果你这么急着想要推走这些玩意……</span>
+<br><span style="color: #626262">KARKAT：我不是在“推走任何玩意”！</span>
+<br><span style="color: #e00707">DAVE：如果你确实想赶走这些玩意的话，而且其实你就是在这样做，也许我们应该进行一些说唱<br>
+DAVE：我的意思是批判性地讨论这一切同时认真地避免使用任何病态押韵或者之类的东西虽然那也许其实很赞
+</span>
+<br><span style="color: #626262">KARKAT：UEHRNGH。</span>
+<br><span style="color: #e00707">DAVE：所以你确定你现在依然对john不存在那种不可调和的昏暗感情吗<br>
+DAVE：我是说我们应该在它发酵成某种污浊而且未经检验的感情酱汁之前把它们拿出来见见光
+</span>
+<br><span style="color: #0715cd">JOHN：dave，我觉得你的发言让karkat很不舒服！<br>
+JOHN：你是又在耍小聪明然后故意让我们感觉不舒服吗？
+</span>
+<br><span style="color: #e00707">DAVE：没有！<br>
+DAVE：我不会对好兄弟们那么做，那太不酷了<br>
+DAVE：我不明白直接把我们真正的想法和情绪说出来有什么让人不舒服的
+</span>
+<br><span style="color: #626262">KARKAT: YEEUURHNGHGHH.</span>
+<br><span style="color: #e00707">DAVE：兄弟你很明显对john有黑桃意味的那种意思只是我不记得你什么时候提起过了<br>
+DAVE：你难道一直都在想这种事的吗
+</span>
+<br><span style="color: #626262">KARKAT：没有！<br>
+KARKAT：没有……真的没有
+</span>
+<br><span style="color: #e00707">DAVE：对啦我们可以谈谈这个的<br>
+DAVE：关于john我可有大把的狗屎废话可说毕竟在我人生的13年的绝大多数时间里他都是我的头号好哥们<br>
+DAVE：封死你的所有可能性的最主要的理由和私人的情绪没有半点关系，真的就只是因为他真的没有能力去恨任何人
+</span>
+<br><span style="color: #626262">KARKAT：我知道！<br>
+KARKAT：这*完全*就是我所知道的和理解的操他妈的事实，同时也是为什么我事后觉得自己愚蠢到家的原因！
+</span>
+<br><span style="color: #0715cd">JOHN：呃……<br>
+JOHN：我不是真的想要鼓励你们继续往这个方向胡思乱想，但是其实我也说不好你说得对不对。
+</span>
+<br><span style="color: #626262">KARKAT：不对吗？</span>
+<br><span style="color: #0715cd">JOHN：我也有真正的愤怒与仇恨啊，就像你们一样，只不过我只会在非常特定的情况下出现这种情绪？<br>
+JOHN：那个穿背带裤的骷髅男就把我气得够呛……<br>
+JOHN：但我百分之百确定那不是柏拉图意义上的恨！
+</span>
+<br><span style="color: #e00707">DAVE：被一个背带裤男气得够呛一听就是那种会让我想洗耳恭听的故事<br>
+DAVE：不过好吧那可能说来话长<br>
+DAVE：嘿karkat也许你还有戏，没准你还没完全出局呢
+</span>
+<br><span style="color: #626262">KARKAT：呃呃呃啊！</span>
+<br><span style="color: #0715cd">JOHN：行了，dave，听起来你现在绝对是在恶整（own）我们！</span>
+<br><span style="color: #e00707">DAVE：占有（也是own）<br>
+DAVE：什么<br>
+DAVE：才不会呢<br>
+DAVE：不然我就真的变成操他妈的混蛋了
+</span>
+<br><span style="color: #0715cd">JOHN：我觉得有能力去恨某个人只是……<br>
+JOHN：使这个假设前提成立的一小部分因素？<br>
+JOHN：占比更大的那一部分呢？你不觉得那才，呃……<br>
+JOHN：更重要一点吗？
+</span>
+<br><span style="color: #e00707">DAVE：哪一部分</span>
+<br><span style="color: #0715cd">JOHN：关于不是同性恋的那部分！！！</span>
+<br><span style="color: #e00707">DAVE：john<br>
+DAVE：兄弟我必须得说<br>
+DAVE：当你谈论你是或者不是“同性恋”的时候你听起来真像个土老帽
+</span>
+<br><span style="color: #0715cd">JOHN：什么！为什么？<br>
+JOHN：不，这是非常正常的说法！<br>
+JOHN：我是说……说这种话真的很正常，对吧？鉴于那就是……关于你……的事实？
+</span>
+<br><span style="color: #626262">KARKAT：随便来个什么人他妈的杀了我吧。</span>
+<br><span style="color: #e00707">DAVE：正常的定义是什么<br>
+DAVE：正常是一坨统治着我们死去的文明的垃圾<br>
+DAVE：我们在几年前就把它们抛在身后了<br>
+DAVE：那是一座再也不重要了的大便山
+</span>
+<br><span style="color: #0715cd">JOHN：这，那行吧？<br>
+JOHN：所以，你是在说……<br>
+JOHN：你到底想说什么？
+</span>
+<br><span style="color: #e00707">DAVE：我想我也不确定</span>
+<br><span style="color: #0715cd">JOHN: ...</span>
+<br><span style="color: #e00707">DAVE：好吧我猜我想说的就是<br>
+DAVE：我觉得事情没有你以为的那么简单<br>
+DAVE：或者也可能是你没有主动去想过但你选择继续假设它是对的因为你没有想太多<br>
+DAVE：而且当我们还是一群傻小孩的时候电影之类的东西就把很多这方面的垃圾塞进了我们的大脑
+</span>
+<br><span style="color: #0715cd">JOHN：我，</span>
+<br><span style="color: #0715cd">JOHN：呃。</span>
+<br><span style="color: #e00707">DAVE：我只是说这种事可能不像你所以为的那么绝对或者简单<br>
+DAVE：但也许这是你的个人问题，我不知道<br>
+DAVE：我只是估计你没有花过多少时间去思考这种问题，因为我们读过和看过的所有东西都在暗示即使是去审视你对它的真实想法也是一条危险的路<br>
+DAVE：因为如果你真的想多了，而且不能总是在潜意识里提醒自己“哈哈不不不不”，那么你知道会发生什么<br>
+DAVE：万一你最终发现你好像……
+</span>
+<br><span style="color: #0715cd">JOHN：……好像什么？</span>
+<br><span style="color: #e00707">DAVE：好像和你所以为的你不一样<br>
+DAVE：或者不是那么像你过去假定自己会成为的样子？
+</span>
+<br><span style="color: #626262">KARKAT：（为什么。为什么这些狗屁会出现在我们的对话之中。）</span>
+<br><span style="color: #e00707">DAVE：我真的不知道<br>
+DAVE：不知道你开着大船把所有人从末日的灾难中拯救出来的那三年到底是怎么度过的<br>
+DAVE：但反正我有他妈的一吨的时间去想这些事情<br>
+DAVE：想我过去说过和做过的每一件事情，以及为什么我会那么说那么做<br>
+DAVE：很多我曾经坚持的事情都是我的人设的一部分，它们让我显得很酷很聪明<br>
+DAVE：但是现在我不是很确定<br>
+DAVE：我们过去一直在互相嘲讽对方是同性恋哪怕我们都知道我们不是，而这正是让这种行为显得“好玩”的原因，你还记得吗
+</span>
+<br><span style="color: #0715cd">JOHN：是啊。<br>
+JOHN：我不知道，但有些时候那是挺有趣的。<br>
+JOHN：那只是我们在开一大堆玩笑而已！
+</span>
+<br><span style="color: #e00707">DAVE：是啊我知道<br>
+DAVE：坦白说有时候评价某件事有多gay真的是种很有趣的活动，而且让我们面对现实吧，有时候某个人或者某件事就是完完全全的gay而且不会有第二种解读方式<br>
+DAVE：但现实更像是所有这些狗屎笑话的本体背后存在一个潜在的暗示，那就是所有这些辣鸡东西都是给基佬娘娘腔而不是我们准备的，因为我们一点儿都不辣鸡，哈哈哈哈这就是笑点所在<br>
+DAVE：这就好比埋下了双重的暗示，那就是真正的操他妈的酷是建立在这种荒谬扯淡的理想阳刚之气上，然而如果你认真去想的话那么1. 这简直蠢到他妈的不可救药2. 男性对阳刚之气的追捧在某种程度上就是操他妈的gay本身3. 反正它们也永远都只是一些我们这辈子都不可能达到的狗屎标准<br>
+DAVE：我认为所有的这些东西都和同样虚假的理想英雄主义混在一起了<br>
+DAVE：就像是以童话书中描写的英雄为标杆去生活，在我看来那和照着社会对硬汉的刻板印象去做人几乎可以划等号<br>
+DAVE：我放弃假装我能做到这两件事已经有一段时间了<br>
+DAVE：而我把大部分时间都花在了反思我“开玩笑”时的程度上<br>
+DAVE：我过去常常左右开弓地猛烈抨击那些人或者把他们碾到人行道上就为了论证他们有多大可能超他妈的gay，或者他们有多大可能去吻一些老哥之类的<br>
+DAVE：我没有真的觉得这有多不对，没有意识到过我在犯浑或者说是进入了一种“麻木不仁”的状态，尽管我想可能事实就是那样的<br>
+DAVE：现在我想这把戏清晰到我可以把它一眼望穿<br>
+DAVE：巨量的冷嘲热讽藏起了很多的不安全感<br>
+DAVE：就像操他妈的掩饰<br>
+DAVE：只要我不停地开它的玩笑，我就不必去认真思考，也不必面对我的真正信仰
+</span>
+<br><span style="color: #0715cd">JOHN：dave，呃。<br>
+JOHN：你说得都很酷而且……<br>
+JOHN：我想我基本上是认同你的观点的？<br>
+JOHN：只是……<br>
+JOHN：呃，我该怎么说呢。<br>
+JOHN：你……<br>
+JOHN：现在你是gay了吗？
+</span>
+<br><span style="color: #e00707">DAVE：什么，没有</span>
+<br><span style="color: #626262">KARKAT：（这些狗屁。为什么这些狗屁就是不结束。我亲爱的苍天。）</span>
+<br><span style="color: #0715cd">JOHN：我不知道，但是听起来你好像在试图暗示我某些东西！</span>
+<br><span style="color: #e00707">DAVE：不伙计才没有，你看</span>
+<br><span style="color: #0715cd">JOHN：我是说，就算你现在是同性恋也没什么大不了的，完全ok！<br>
+JOHN：如果你真的是那也真的挺酷的。<br>
+JOHN：我只是在想……<br>
+JOHN：你变gay了会是我改写时间线时造成的奇怪后果吗？<br>
+JOHN：好吧不应该说“奇怪”……<br>
+JOHN：它只是，真的很意外！<br>
+JOHN：我不知道我做了什么会导致这种后果的事。<br>
+JOHN：也许救了terezy的一个毛绒玩具就会让某种见鬼的同性恋蝴蝶效应发生在你的身上？<br>
+JOHN：天哪，谁知道呢！
+</span>
+<br><span style="color: #e00707">DAVE：老兄你根本没在听我说的<br>
+DAVE：虽然同性恋蝴蝶效应是一个非常有趣的说法我不打算否认它的概念<br>
+DAVE：总之我想说的东西可能确实有点跑偏了<br>
+DAVE：你开始思考我是不是“变gay了”这一事实让我怀疑也许你还没完全get到我刚才这一通闲扯的频道<br>
+DAVE：也许我们应该换个时机再来把这个话题打倒在地，我还有很多话想和你说，但现在可能不是一个适合讨论的好场合<br>
+DAVE：我的意思不是字面上的摔跤然后打倒在地，因为那大概率会是我们可能进行的最gay的行动，但反正你懂我的意思
+</span>
+<br><span style="color: #626262">KARKAT：（对！以后！以后再说，因为这样你们就能闭嘴了！哦那不是很好吗。）</span>
+<br><span style="color: #0715cd">JOHN：没关系，只要你想，我们随时都可以聊任何你想聊的话题<br>
+JOHN：我只是还没明白你想要表达什么，真的。<br>
+JOHN：比如说，这段对话的主旨是什么？<br>
+JOHN：你现在真的开始被男生吸引了是吗？<br>
+JOHN：你……<br>
+JOHN：呃。<br>
+JOHN：你是不是……<br>
+JOHN：比如说，和男生约过会？
+</span>
+<br><span style="color: #e00707">DAVE：呃</span>
+<br><span style="color: #0715cd">JOHN：但是陨石上甚至一共也没几个男生？<br>
+JOHN：哦，他们有个小丑，但我没看出来你和他……<br>
+JOHN：所以就真的只剩下……<br>
+JOHN：嗯，你和karkat……<br>
+JOHN：所以你和karkat，这个。<br>
+JOHN：呃嗯。
+</span></p>
+          </div>
+        <div class="o_story-nav type-hs-copy line-tight pad-x-0 pad-x-lg--md mar-b-lg">
+            <div>
+              <span class="">&gt;</span>
+              <a href="https://linzhiyi622.github.io/homestuckjz.GitHub.io/7488.html"
+                >[A6A6I4] ====></a><br>
+            </div>
+        </div>
+      
+<footer id="story-footer" role="banner">
+  <div id="story_footer_container" class="o_story-page-footer flex pad-t-0 pad-x-0
+     flex-justify 
+    ">
+      <div class="pad-l-lg--md mar-b-md type-hs-small type-hs-bottom--md type-center type-left--md">
+        <ul class="o_game-nav">
+          <li class="o_game-nav-item">
+            <a id="o_start-over"  href="/story/1">Start Over</a>
+          </li>
+            <li class="o_game-nav-item">
+              <a  href="/story/89">Go Back</a>
+            </li>
+        </ul>
+      </div>
+      <script>
+//<![CDATA[
+$(document).ready(function() { Gamenav.checkAutosave(); });
+//]]>
+</script>
+      <nav id="gamenav-container" data-gamenav-state="closed" role="navigation" class="o_gamenav-container">
+        <a href="javascript:void(0)" data-gamenav-close class="nav-btn color-black pad-y-rg type-rg" style="text-decoration:none;"><i class="icon-close"></i><span>Dismiss</span></a>
+        <ul class="o_game-nav pad-r-lg--md o_game-options">
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.saveGame('story', 90);">Save Game</a>
+            <i class="icon-tool-tip tooltip-target" data-tooltip aria-haspopup="true" 
+               title='If you have cookies enabled, you can save your spot in the story. Click "Save Game", then when you return to the site, click "Load Game" to return to where you were.'>
+            </i>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.autoSaveGame();">Auto-Save!</a>
+            <i class="icon-tool-tip tooltip-target" data-tooltip aria-haspopup="true" 
+               title='If you have cookies enabled, click this to automatically save your spot in the story wherever you go! When you return to the site later, it will automatically take you to where you left off. Pretty neat! 
+
+If this mode ever gets annoying though, remember you can just delete the cookies by clicking "Delete Game Data".'>
+            </i>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.loadGame();">Load&nbsp;Game</a>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.deleteGame();">Delete Game Data</a>
+          </li>
+        </ul>
+      </nav>
+    <a href="javascript:void(0)" data-gamenav-open class="nav-btn nav-btn--center type-hs-small mar-b-md" style="text-decoration:none; text-transform: none; font-size:14px; line-height:14px;"><span>Options</span> <i class="icon-menu" style="margin:0;"></i></a>
+  </div>
+</footer>
+
+  
+    </div>
+  </div>
+
+  
+</div>
+
+    
+<div class="o_site-footer row pos-r pad-t-rg pad-b-xl pad-b-0--md bg-dark-gray">
+  <div class="float-l"><img src="https://www.homestuck.com/assets/footer_logo-a913b68f0efbaed8da48bc0a4f22b35d369f40d0e4db132013acbe6f26b3e37f.gif" alt="Footer logo" /><br></div>
+  <div class="float-r disp-n disp-bl--sm"><img src="https://www.homestuck.com/assets/footer_logo-a913b68f0efbaed8da48bc0a4f22b35d369f40d0e4db132013acbe6f26b3e37f.gif" alt="Footer logo" /><br></div>
+  <div class="type-center pad-t-md--md">
+    <ul>
+      <li><a href="/contacts">Contacts</a></li>
+      <li><a href="/privacy">Privacy Policy</a></li>
+    </ul>
+    <div><span style="white-space:nowrap;">&copy; 2018 Homestuck</span> <span style="white-space:nowrap;">and VIZ Media</span></div>
+  </div>
+</div>
+
+
+
+    <div id="overlay"      data-overlay-state="off" class="o_overlay"></div>
+    <div id="game_overlay" data-game-overlay-state="off" class="o_game-overlay"></div>
+    <div id="overlay_wait" data-overlay-state="off" class="o_overlay-wait"></div>
+
+
+
+  </body>
+</html>
