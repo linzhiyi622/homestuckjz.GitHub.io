@@ -1,0 +1,373 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9 ]>    <html dir="ltr" lang="en-US" class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en-US"><!--<![endif]-->
+<html>
+  <head>
+  <!-- application -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <meta charset="UTF-8">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"1b930da09b","applicationID":"65900267","transactionName":"cFkNREpaWA9dF0pBVlRTEB9LQVsRQQ==","queueTime":0,"applicationTime":5,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"1b930da09b",applicationID:"65900267"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1210.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Homestuck</title>
+    <meta name="description" content="A tale about a boy and his friends and a game they play together. About 8,000 pages. Don&#39;t say we didn&#39;t warn you.">
+    <script>
+//<![CDATA[
+var getGAEventLabel = function(){ return "Homestuck"; };
+//]]>
+</script>
+      <link rel="canonical" href="/story/90">
+
+          <script src="/assets/createjs.min-8a3c3e7a3d0a0049630c829b71652833e827ec837da2506b4503fcfb670e1bc9.js"></script>
+          <script src="/assets/glowfilter.min-b2d71dc70203d784635ec4f157fda31b5943155a18a74ff44454ea61c1a6b17a.js"></script>
+          <script src="/assets/gsap/plugins/EaselPlugin.min-7b39add3c5d5c9595472a80179ed328187f31ceff2eac646d66a9dcff2797fa0.js"></script>
+          <script src="/assets/gsap/TweenLite.min-5e942b2a54af3190383c2b0af228108e9aa0d9a18486fe6305c0d7c79e462c07.js"></script>
+          <script src="/assets/hs2/00090-b67f41efa2a52791890ee6e8c9230be33321fcfab95ab4d09cce1c01ce45fada.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#6bbe4a">
+<meta name="theme-color" content="#ffffff">
+
+      <link rel="stylesheet" href="https://use.typekit.net/kek1uwn.css">
+    <link rel="stylesheet" media="all" href="assets/main.css" />
+    <script src="assets/main.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-136373-45', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </head>
+  
+  <body
+    
+      onload="init();"
+    >
+
+    
+    <header id="site-header" role="banner">
+  <div id="header-container" class="o_story-page-header row flex pad-t-0 ">
+    <a href="javascript:void(0)" data-nav-open class="nav-btn nav-btn--center color-white" style="overflow-wrap:normal;text-decoration:none;"><i class="icon-menu"></i><span>Menu</span></a>
+    <nav id="nav-container" data-nav-state="closed" role="navigation" class="o_nav-container">
+      <a href="javascript:void(0)" data-nav-close class="nav-btn color-white pad-y-rg type-rg" style="overflow-wrap:normal;text-decoration:none;"><i class="icon-close"></i><span>Dismiss</span></a>
+      <ul id="primary-nav" class="o_primary-nav style-caps weight-bold disp-ib color-white type-rg">
+        <li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#29ff4a" href="/">HOME</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#39d5f6" href="/stories">READ</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#39d5f6" href="/info-story">INFO</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#f7f72a" href="/info-shop">SHOP</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#f7f72a" href="/info-games">GAMES</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#ffb529" href="/news">NEWS</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn"><a class="o_primary-nav-link" style="color:#ffb529"  href="/info-more">MORE</a></li>
+      </ul>
+    </nav>
+    <div id="site-search" class="o_site-search disp-ib">
+      <form action="/search" method="GET">
+        <input name="search" type="search" class="o_search-ac o_site-search-field" placeholder="" autocomplete="off">
+        <button class="o_site-search-btn"><i class="icon-search"></i></button>
+      </form>
+    </div>
+  </div>
+</header>
+    
+
+    <script>
+$(document).ready(function() {
+    // Make content area responsive during preload
+
+    var $content_container = $("#content_container");
+    var $anim_container    = $("#animation_container");
+    var $_preload_div_     = $("#_preload_div_");
+    var w = $anim_container.width(), h = $anim_container.height();
+    var iw = $content_container.width(), ih = $content_container.height();
+    var pw = $_preload_div_.width(), ih = $_preload_div_.height();
+    var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1, psRatio=1;;
+
+    if ($.browser.mobile === true) {
+      $anim_container.width(w*xRatio+'px');
+      $anim_container.height(h*xRatio+'px');
+    } else {
+      $_preload_div_.css('left', ((iw-(pw))/2)+'px');
+    }
+
+});
+
+</script>
+
+<div class="pos-r">
+
+  <div class="row bg-hs-gray bg-light-gray--md pad-t-md--md pos-r">
+    <div id="content_container" class="pos-r mar-x-auto disp-bl bg-hs-gray" style="max-width:650px;">
+        <h2 class="pad-t-md pad-x-lg--md type-center type-hs-header line-tight">[A6A6I5] ====&gt;</h2>
+        <div class="pad-t-md">
+              <img src="https://www.homestuck.com/images/storyfiles/hs2/07489.gif" class="mar-x-auto disp-bl">
+        </div>
+         
+          </div>
+      </div>
+<script>
+  if (!anchorSlot) {
+    googletag.cmd.push(function() {
+      googletag.display(staticSlot);
+    });
+  }
+</script>
+
+    </div>
+  </div>
+  
+  <div class="row bg-hs-gray bg-light-gray--md pad-b-md pad-b-lg--md pos-r">
+    <div class="mar-x-auto disp-bl bg-hs-gray pad-t-lg" style="max-width:650px;">
+          <div class="type-center mar-x-0 mar-x-hs-md--md mar-b-hs-lg o_chat-container">
+ <button class="o_chat-log-btn">Show Dialoglog</button> 
+            <p class="o_chat-log type-left type-rg type-hs-small--md line-caption line-copy--md mar-t-md mar-t-md--md pad-x-md pad-x-hs-lg--md pad-b-md pad-b-md--md disp-n">
+              <span style="color: #ff6ff2">ROXY：哈哈对不起噢</span>
+<br><span style="color: #b536da">ROSE：对不起什么？</span>
+<br><span style="color: #ff6ff2">ROXY：对不起我现在有点结巴而且像个只会傻笑的白痴<br>
+ROXY：我只是很难……<br>
+ROXY：很难让自己相信你是真实存在的，你就在这里，你活着，你没有正在死去，而我自己也是！<br>
+ROXY：我是指我在这里而且和你共享上述的所有定语<br>
+ROXY：我也很难相信！<br>
+ROXY：我有太多话想说了……<br>
+ROXY：我想应该是吧？？？<br>
+ROXY：即使我现在一点语言都组织不出来
+</span>
+<br><span style="color: #b536da">ROSE：我明白你的意思。</span>
+<br><span style="color: #ff6ff2">ROXY：我希望我可以就这样坐在你的旁边一会儿，不做任何特意的表达</span>
+<br><span style="color: #b536da">ROSE：当然没有问题。<br>
+ROSE：只要你愿意以相似的态度原谅我精巧的自我表达能力的触目惊心的消逝。
+</span>
+<br><span style="color: #ff6ff2">ROXY：omg！！！！<br>
+ROXY：啊哈哈哈你是dirk！<br>
+ROXY：哇哦我怎么才发现啊哇哇哇哦！<br>
+ROXY：你说话真的超级像他，我的天哪，简直太完美太可爱了:3
+</span>
+<br><span style="color: #b536da">ROSE: Dirk？</span>
+<br><span style="color: #ff6ff2">ROXY：哈哈哈我现在彻底忘不掉了我没法不去这么听……<br>
+ROXY：连你的声音听起来都有点像他，只不过……是女版的dirk<br>
+ROXY：lmao欧耶<3
+</span>
+<br><span style="color: #b536da">ROSE：他听起来很厉害。</span>
+<br><span style="color: #ff6ff2">ROXY：哦你根本想不到</span>
+<br><span style="color: #b536da">ROSE：唔，我听说他再过一会儿就能到这里了。<br>
+ROSE：如果他像Dave已故的大哥，而且也像我——而他显然是——那么我猜，真正的派对就快要开场了。
+</span>
+<br><span style="color: #ff6ff2">ROXY：我准备好了<|:)</span>
+<br><span style="color: #b536da">ROSE：我想知道关于他的事。<br>
+ROSE：比如说，他是否像他所对应的那位成年人一样对软屁屁人偶仔有着极度的贪婪。<br>
+ROSE：再加上他那为数众多的、令人隐约感到不安的心理怪癖，是否能让一个敬业的治疗师团队忙上数年。
+</span>
+<br><span style="color: #ff6ff2">ROXY：答案是肯定的，以及肯定的</span>
+<br><span style="color: #b536da">ROSE：嗯。<br>
+ROSE：出于不知名的原因，这个答案让我很是开心。<br>
+ROSE：但我更想知道的是关于你的事。<br>
+ROSE：我想我会有很多时间可以用来追查我的生物学父亲的癖好。
+</span>
+<br><span style="color: #ff6ff2">ROXY：你想知道我的什么？</span>
+<br><span style="color: #b536da">ROSE：一切！<br>
+ROSE：我想，选择问你什么的主要难点在于从所有我想问你的问题中筛选出我想问我的母亲的问题，这里我指的是，抚养我长大的那个女人。
+</span>
+<br><span style="color: #ff6ff2">ROXY：好吧我确实没有养大过你或者什么的，但我可以真诚地试着去回答一下这些问题</span>
+<br><span style="color: #b536da">ROSE：好的。<br>
+ROSE：你……<br>
+ROSE：是真的喜欢巫师吗？
+</span>
+<br><span style="color: #ff6ff2">ROXY: rose</span>
+<br><span style="color: #b536da">ROSE：嗯？</span>
+<br><span style="color: #ff6ff2">ROXY: rose</span>
+<br><span style="color: #ff6ff2">ROXY: rooose</span>
+<br><span style="color: #b536da">ROSE: ...</span>
+<br><span style="color: #ff6ff2">ROXY：我超他妈的<br>
+ROXY：爱<br>
+ROXY：巫~~~师
+</span>
+<br><span style="color: #b536da">ROSE：我了解了。<br>
+ROSE：虽然听起来有点奇怪，但这确实让我对你们的理解加深了一些。
+</span>
+<br><span style="color: #ff6ff2">ROXY：哦？</span>
+<br><span style="color: #b536da">ROSE：我和她的关系是复杂的。<br>
+ROSE：但我已经发现那主要是我的错。那时的我太年轻，还不能理解她。
+</span>
+<br><span style="color: #ff6ff2">ROXY：我从来没有机会误解我的妈妈<br>
+ROXY：或者说成年版的你<br>
+ROXY：或者说……我是说，我没有当面误解她的机会<br>
+ROXY：她对我而言更像是一个传奇形象<br>
+ROXY：因为她死了四百年我才长大
+</span>
+<br><span style="color: #b536da">ROSE：啊，是的。<br>
+ROSE：我想我得提前叫停比赛了。你的自传比我的有趣，而且有趣得多。
+</span>
+<br><span style="color: #ff6ff2">ROXY：其实不是的！<br>
+ROXY：至少在我看来……我很孤独<br>
+ROXY：为了消磨时间，我经常回想她的事迹<br>
+ROXY：至少从历史的角度来看，她真的很了不起<br>
+ROXY：她写了超赞的关于巫师的书，还骑着一个种族灭绝主义的肥男从血瀑布上漂流而下
+</span>
+<br><span style="color: #b536da">ROSE：她写了超赞的关于巫师的书？</span>
+<br><span style="color: #ff6ff2">ROXY：对！<br>
+ROXY：它们超有名而且超棒而且什么都好
+</span>
+<br><span style="color: #b536da">ROSE：听起来我好像误入了错误的行业。<br>
+ROSE：Sburb里没有钱可赚。<br>
+ROSE：噢好吧，其实是有的。但那只是些难以置信的愚蠢面额，而且不是特别有用。
+</span>
+<br><span style="color: #008141">KANAYA：你有这些书的复制版吗</span>
+<br><span style="color: #ff6ff2">ROXY：嗯，有的！<br>
+ROXY：没错我有，我的星球上就有它们的复制版<br>
+ROXY：只要john没有在回溯的过程中像偷书贼一样把它们搞没！
+</span>
+<br><span style="color: #008141">KANAYA：如果你不介意，我真的很想找时间读一下它们</span>
+<br><span style="color: #ff6ff2">ROXY：不，当然不！</span>
+<br><span style="color: #b536da">ROSE：噢，顺便介绍一下，这是Kanaya。<br>
+ROSE：抱歉，在礼节的欠缺和常规的犯蠢的共同作用下，我没能更及时地把她介绍给你。
+</span>
+<br><span style="color: #008141">KANAYA：你好</span>
+<br><span style="color: #ff6ff2">ROXY：嗨！<br>
+ROXY：你的名字很好听，你也很漂亮
+</span>
+<br><span style="color: #008141">KANAYA：谢谢<br>
+KANAYA：我也很欣赏你的名字和外观的美感，这在很大程度上是源于它们与你的女儿的特质有许多相似之处
+</span>
+<br><span style="color: #ff6ff2">ROXY：哇噢，老哥说起话来真是既让人费解又异常流畅<br>
+ROXY：我大受震撼
+</span>
+<br><span style="color: #b536da">ROSE：欢迎来到Maryam市，这里人口众多，到处都充斥着诸如此类的妙句。</span>
+<br><span style="color: #ff6ff2">ROXY：以及没问题，我可以把那些书给你！<br>
+ROXY：它们超棒，而且让我也很想写我自己的巫师故事
+</span>
+<br><span style="color: #b536da">ROSE：你写了吗？</span>
+<br><span style="color: #ff6ff2">ROXY：呃<br>
+ROXY：算是写过吧:\
+</span>
+<br><span style="color: #b536da">ROSE：可以让我看一看吗？</span>
+<br><span style="color: #ff6ff2">ROXY：唔……</span>
+<br><span style="color: #b536da">ROSE：嘿，你都看过我写的了！</span>
+<br><span style="color: #ff6ff2">ROXY：是啊，但当你写下你的作品的时候你已经是个老职业作家了！<br>
+ROXY：它们是巫师奇幻界的惊天杰作！！！<br>
+ROXY：它们甚至赢了普利策等等狗屎奖项
+</span>
+<br><span style="color: #b536da">ROSE：真的？？</span>
+<br><span style="color: #ff6ff2">ROXY：唔我忘了，大概吧？</span>
+<br><span style="color: #b536da">ROSE：哦。</span>
+<br><span style="color: #ff6ff2">ROXY：我真的不知道，但它们就是超级超级棒<br>
+ROXY：所以我确信古代的评奖专家们肯定也是，哇哦哥们看呐看这些巫师<br>
+ROXY：真是超级超级操他妈的棒<br>
+ROXY：把所有的奖项都颁给它们然后就把这些奖项关停吧，不是因为世界末日即将到来，而是因为你就是不可能写得比这些巫师小说更好
+</span>
+<br><span style="color: #b536da">ROSE：我接受这个说法。<br>
+ROSE：我曾经的职业目标之一就是写一些超级富有争议的魔术师故事，并且导致至少一个有声望的奖项被永久且粗暴地取消。
+</span>
+<br><span style="color: #ff6ff2">ROXY：好吧，我不知道，但我想你可以看看我的故事<br>
+ROXY：但是和你的杰作相比我的作品就像一个苍白的叙事鬼魂，而且还有点怪？
+</span>
+<br><span style="color: #b536da">ROSE：我喜欢怪东西！</span>
+<br><span style="color: #ff6ff2">ROXY：好吧<br>
+ROXY：只是……你的意见对我来说意义重大&我很紧张因为你可能会觉得我写得好差！
+</span>
+<br><span style="color: #b536da">ROSE：但我甚至从未写下过你读到的那些杰作。<br>
+ROSE：我想你看到的大抵是我还尚未获得的能力。<br>
+ROSE：真的，我没有那么优秀。<br>
+ROSE：我有我自己的故事的草稿，如果你想的话，你可以拿去看。<br>
+ROSE：坦白说，它们没什么特别的。
+</span>
+<br><span style="color: #ff6ff2">ROXY：真的吗？？<br>
+ROXY：哦亲爱的那好吧，它们听起来很有意思！:)
+</span></p>
+          </div>
+        <div class="o_story-nav type-hs-copy line-tight pad-x-0 pad-x-lg--md mar-b-lg">
+            <div>
+              <span class="">&gt;</span>
+              <a href="https://linzhiyi622.github.io/homestuckjz.GitHub.io/7494.html"
+                >[A6A6I4] ====></a><br>
+            </div>
+        </div>
+      
+<footer id="story-footer" role="banner">
+  <div id="story_footer_container" class="o_story-page-footer flex pad-t-0 pad-x-0
+     flex-justify 
+    ">
+      <div class="pad-l-lg--md mar-b-md type-hs-small type-hs-bottom--md type-center type-left--md">
+        <ul class="o_game-nav">
+          <li class="o_game-nav-item">
+            <a id="o_start-over"  href="/story/1">Start Over</a>
+          </li>
+            <li class="o_game-nav-item">
+              <a  href="/story/89">Go Back</a>
+            </li>
+        </ul>
+      </div>
+      <script>
+//<![CDATA[
+$(document).ready(function() { Gamenav.checkAutosave(); });
+//]]>
+</script>
+      <nav id="gamenav-container" data-gamenav-state="closed" role="navigation" class="o_gamenav-container">
+        <a href="javascript:void(0)" data-gamenav-close class="nav-btn color-black pad-y-rg type-rg" style="text-decoration:none;"><i class="icon-close"></i><span>Dismiss</span></a>
+        <ul class="o_game-nav pad-r-lg--md o_game-options">
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.saveGame('story', 90);">Save Game</a>
+            <i class="icon-tool-tip tooltip-target" data-tooltip aria-haspopup="true" 
+               title='If you have cookies enabled, you can save your spot in the story. Click "Save Game", then when you return to the site, click "Load Game" to return to where you were.'>
+            </i>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.autoSaveGame();">Auto-Save!</a>
+            <i class="icon-tool-tip tooltip-target" data-tooltip aria-haspopup="true" 
+               title='If you have cookies enabled, click this to automatically save your spot in the story wherever you go! When you return to the site later, it will automatically take you to where you left off. Pretty neat! 
+
+If this mode ever gets annoying though, remember you can just delete the cookies by clicking "Delete Game Data".'>
+            </i>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.loadGame();">Load&nbsp;Game</a>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.deleteGame();">Delete Game Data</a>
+          </li>
+        </ul>
+      </nav>
+    <a href="javascript:void(0)" data-gamenav-open class="nav-btn nav-btn--center type-hs-small mar-b-md" style="text-decoration:none; text-transform: none; font-size:14px; line-height:14px;"><span>Options</span> <i class="icon-menu" style="margin:0;"></i></a>
+  </div>
+</footer>
+
+  
+    </div>
+  </div>
+
+  
+</div>
+
+    
+<div class="o_site-footer row pos-r pad-t-rg pad-b-xl pad-b-0--md bg-dark-gray">
+  <div class="float-l"><img src="https://www.homestuck.com/assets/footer_logo-a913b68f0efbaed8da48bc0a4f22b35d369f40d0e4db132013acbe6f26b3e37f.gif" alt="Footer logo" /><br></div>
+  <div class="float-r disp-n disp-bl--sm"><img src="https://www.homestuck.com/assets/footer_logo-a913b68f0efbaed8da48bc0a4f22b35d369f40d0e4db132013acbe6f26b3e37f.gif" alt="Footer logo" /><br></div>
+  <div class="type-center pad-t-md--md">
+    <ul>
+      <li><a href="/contacts">Contacts</a></li>
+      <li><a href="/privacy">Privacy Policy</a></li>
+    </ul>
+    <div><span style="white-space:nowrap;">&copy; 2018 Homestuck</span> <span style="white-space:nowrap;">and VIZ Media</span></div>
+  </div>
+</div>
+
+
+
+    <div id="overlay"      data-overlay-state="off" class="o_overlay"></div>
+    <div id="game_overlay" data-game-overlay-state="off" class="o_game-overlay"></div>
+    <div id="overlay_wait" data-overlay-state="off" class="o_overlay-wait"></div>
+
+
+
+  </body>
+</html>
