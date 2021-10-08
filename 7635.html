@@ -109,9 +109,14 @@ $(document).ready(function() {
 
 <div class="pos-r">
 
-  <div class="row bg-hs-gray bg-light-gray--md pad-0 pos-r">
-    <div id="content_container" class="pos-r mar-x-auto disp-bl bg-hs-gray" style="max-width:950px;">
-        <div >
+  <div class="row bg-hs-gray bg-light-gray--md pad-t-md--md pos-r">
+    <div id="content_container" class="pos-r mar-x-auto disp-bl bg-hs-gray" style="max-width:650px;">
+        <div class="pos-r pad-t-md">
+          <div id="animation_container" class="bg-white" style="width:650px; 
+            height:450px;">
+            <canvas id="canvas" width="650" height="450" style="position: absolute; display: none;"></canvas>
+            <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:650px; height:450px; position: absolute; left: 0px; top: 0px; display: none;">
+            </div>
               <iframe class="markdown-player" 
   
 src="//player.bilibili.com/player.html?aid=9643757&p=16&amp;high_quality=0&amp;danmaku=1&amp;as_wide=0" 
