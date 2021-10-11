@@ -1,0 +1,299 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9 ]>    <html dir="ltr" lang="en-US" class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en-US"><!--<![endif]-->
+<html>
+  <head>
+  <!-- application -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <meta charset="UTF-8">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"1b930da09b","applicationID":"65900267","transactionName":"cFkNREpaWA9dF0pBVlRTEB9LQVsRQQ==","queueTime":0,"applicationTime":5,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"1b930da09b",applicationID:"65900267"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1210.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Homestuck</title>
+    <meta name="description" content="A tale about a boy and his friends and a game they play together. About 8,000 pages. Don&#39;t say we didn&#39;t warn you.">
+    <script>
+//<![CDATA[
+var getGAEventLabel = function(){ return "Homestuck"; };
+//]]>
+</script>
+      <link rel="canonical" href="/story/90">
+
+          <script src="/assets/createjs.min-8a3c3e7a3d0a0049630c829b71652833e827ec837da2506b4503fcfb670e1bc9.js"></script>
+          <script src="/assets/glowfilter.min-b2d71dc70203d784635ec4f157fda31b5943155a18a74ff44454ea61c1a6b17a.js"></script>
+          <script src="/assets/gsap/plugins/EaselPlugin.min-7b39add3c5d5c9595472a80179ed328187f31ceff2eac646d66a9dcff2797fa0.js"></script>
+          <script src="/assets/gsap/TweenLite.min-5e942b2a54af3190383c2b0af228108e9aa0d9a18486fe6305c0d7c79e462c07.js"></script>
+          <script src="/assets/hs2/00090-b67f41efa2a52791890ee6e8c9230be33321fcfab95ab4d09cce1c01ce45fada.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#6bbe4a">
+<meta name="theme-color" content="#ffffff">
+
+      <link rel="stylesheet" href="https://use.typekit.net/kek1uwn.css">
+    <link rel="stylesheet" media="all" href="assets/main.css" />
+    <script src="assets/main.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-136373-45', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </head>
+  
+  <body
+    
+      onload="init();"
+    >
+
+    
+    <header id="site-header" role="banner">
+  <div id="header-container" class="o_story-page-header row flex pad-t-0 ">
+    <a href="javascript:void(0)" data-nav-open class="nav-btn nav-btn--center color-white" style="overflow-wrap:normal;text-decoration:none;"><i class="icon-menu"></i><span>Menu</span></a>
+    <nav id="nav-container" data-nav-state="closed" role="navigation" class="o_nav-container">
+      <a href="javascript:void(0)" data-nav-close class="nav-btn color-white pad-y-rg type-rg" style="overflow-wrap:normal;text-decoration:none;"><i class="icon-close"></i><span>Dismiss</span></a>
+      <ul id="primary-nav" class="o_primary-nav style-caps weight-bold disp-ib color-white type-rg">
+        <li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#29ff4a" href="/">HOME</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#39d5f6" href="/stories">READ</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#39d5f6" href="/info-story">INFO</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#f7f72a" href="/info-shop">SHOP</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#f7f72a" href="/info-games">GAMES</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#ffb529" href="/news">NEWS</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn"><a class="o_primary-nav-link" style="color:#ffb529"  href="/info-more">MORE</a></li>
+      </ul>
+    </nav>
+    <div id="site-search" class="o_site-search disp-ib">
+      <form action="/search" method="GET">
+        <input name="search" type="search" class="o_search-ac o_site-search-field" placeholder="" autocomplete="off">
+        <button class="o_site-search-btn"><i class="icon-search"></i></button>
+      </form>
+    </div>
+  </div>
+</header>
+    
+
+    <script>
+$(document).ready(function() {
+    // Make content area responsive during preload
+
+    var $content_container = $("#content_container");
+    var $anim_container    = $("#animation_container");
+    var $_preload_div_     = $("#_preload_div_");
+    var w = $anim_container.width(), h = $anim_container.height();
+    var iw = $content_container.width(), ih = $content_container.height();
+    var pw = $_preload_div_.width(), ih = $_preload_div_.height();
+    var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1, psRatio=1;;
+
+    if ($.browser.mobile === true) {
+      $anim_container.width(w*xRatio+'px');
+      $anim_container.height(h*xRatio+'px');
+    } else {
+      $_preload_div_.css('left', ((iw-(pw))/2)+'px');
+    }
+
+});
+
+</script>
+
+<div class="pos-r">
+
+  <div class="row bg-hs-gray bg-light-gray--md pad-t-md--md pos-r">
+    <div id="content_container" class="pos-r mar-x-auto disp-bl bg-hs-gray" style="max-width:650px;">
+        <h2 class="pad-t-md pad-x-lg--md type-center type-hs-header line-tight">[A6A6I5] ====&gt;</h2>
+        <div class="pad-t-md">
+               <img src="https://www.homestuck.com/images/storyfiles/hs2/07801.gif" class="mar-x-auto disp-bl"> 
+        </div>
+         
+          </div>
+      </div>
+<script>
+  if (!anchorSlot) {
+    googletag.cmd.push(function() {
+      googletag.display(staticSlot);
+    });
+  }
+</script>
+
+    </div>
+  </div>
+  
+  <div class="row bg-hs-gray bg-light-gray--md pad-b-md pad-b-lg--md pos-r">
+    <div class="mar-x-auto disp-bl bg-hs-gray pad-t-lg" style="max-width:650px;">
+          <div class="type-center mar-x-0 mar-x-hs-md--md mar-b-hs-lg o_chat-container">
+ <button class="o_chat-log-btn">Show Dialoglog</button> 
+            <p class="o_chat-log type-left type-rg type-hs-small--md line-caption line-copy--md mar-t-md mar-t-md--md pad-x-md pad-x-hs-lg--md pad-b-md pad-b-md--md disp-n"><span style="color: #00d5f2">NANNASPRITE：你来了！<br>
+NANNASPRITE：我一直在期待与你相见的这一天，亲爱的。:B<br>
+JANE：真的吗？<br>
+JANE：你是谁？<br>
+NANNASPRITE：我是你！<br>
+NANNASPRITE：但在大多数人眼中我是John的奶奶，呵~呵~！<br>
+JANE：哦，对！<br>
+JANE：他和我提起过你。<br>
+JANE：天哪！<br>
+JANE：很高兴见到你……奶奶，我想我也应该这么叫你？<br>
+NANNASPRITE：可以！<br>
+JANE：叫你Jane可能会有点奇怪。<br>
+JANE：而且，也许有些冒犯？<br>
+NANNASPRITE：怎么会呢？<br>
+NANNASPRITE：那就是我的名字呀。<br>
+JANE：是，但是，<br>
+JANE：你比我年长了好几十年，我想是的。<br>
+JANE：你积累了那么多年的人生经验与智慧，而且……<br>
+JANE：还打扮成了小丑的样子？<br>
+NANNASPRITE：:B<br>
+JANE：当然我没有在贬低你华丽的打扮，我很喜欢它。<br>
+JANE：我只是想说……<br>
+JANE：你的人生经历一定精彩得超乎我的想象。<br>
+JANE：我不能就这样用我自己的名字来称呼你，把你看作我的镜像是不对的，那有些太轻浮了。<br>
+NANNASPRITE：但是我说的是真的，Jane，这次相逢完全是我的荣幸！<br>
+NANNASPRITE：我在知晓了你的存在之后就一直在期待这一天的到来。<br>
+NANNASPRITE：在帮助John在他的进程中过完那短短的一天之后，我就再也没有遇到过一个能让我感受到自我价值的时刻。<br>
+NANNASPRITE：是的，我后来又陪伴了John和他的姐姐几年，为他们烘焙或是在他们需要倾诉时做一个富有同理心的树洞……<br>
+NANNASPRITE：但从某种意义上而言，自从我的灰烬落入这个有点老又有点傻的导航灵之后，我就过上了一种孤独的生活。<br>
+NANNASPRITE：我一直都是一个绝对的辅助者，即使在自己最荣耀的时刻也只能服务于他人！<br>
+NANNASPRITE：所以当我听说你的存在，一个成为了真正的英雄的平行的我，那么年轻、那么强力，而且注定要迎接充满重大事迹的人生……<br>
+NANNASPRITE：我真的激动到发狂。我知道我们一定要见上一面！<br>
+JANE：哦……我的天哪！<br>
+JANE：你，<br>
+JANE：你真的是这么看我的吗？<br>
+NANNASPRITE：当然，Jane！<br>
+NANNASPRITE：当然，我不是在暗示我对自己的人生轨迹感到遗憾。<br>
+NANNASPRITE：出于自愿的选择，我过完了平淡的一生，尽可能远离阴谋和冒险。<br>
+NANNASPRITE：你看，我是在一个危机四伏的环境下长大的。我知道抚养我的那个女人有多残忍，以及如果我破坏了她的计划或者产生任何反抗的意图，她会对我或我爱的人做什么。<br>
+NANNASPRITE：所以我过着简单的生活。我组建了家庭，开了一家朴素的恶作剧商店。虽然我一直知道灾难正在酝酿，但那确实是我一生中最美好的时光。<br>
+NANNASPRITE：但我所知晓的自始至终都比我所展现出的更多，我以微妙的方式用我的理解为那些在伟大的战争中接过炬火的人提供帮助。<br>
+NANNASPRITE：但后来，我从一个对人生略知一二的人转变成了一个对死亡了解更多的人。被复活成导航灵给了我对游戏及其相关知识的深刻了解。那可谓是我的巅峰，一个真正的丑角智者，我能回答世上的一切问题。<br>
+NANNASPRITE：然后，我亲爱的孩子们用刻痕抹去了进程，冲向了未知的地域。<br>
+NANNASPRITE：我和他们一起冒险，但同时也不再能够预测前方还有什么在等着我们。<br>
+NANNASPRITE：我从我的巅峰，一个全知的状态，跌入了完全无可预知的范畴。从我记事起，那是我第一次不知道接下来会发生什么。<br>
+NANNASPRITE：在某种程度上这其实是一种解脱！我和可爱的孩子们在船上度过了美好的三年。我没怎么想过前方会有什么挑战在等待我们。<br>
+NANNASPRITE：但当我去想的时候，我的思绪总是飘向你，Jane。<br>
+NANNASPRITE：每当我想到你和你即将展开的冒险，我就觉得我又变成了一个小孩。<br>
+NANNASPRITE：它让我找回曾经感受到过的生命的无限潜力，在我的养母将它扼杀、迫使我面对如果想要存活，生命就只能委身于相当有限的形式这一事实之前。<br>
+NANNASPRITE：所以，当我看到你，我看到的是我小时候拥有过的潜力终于得到实现。<br>
+NANNASPRITE：只是实现的方式比我那时能想到的还要特别！<br>
+NANNASPRITE：看到你是这样一个富有英雄气概的，准备有所作为、点燃属于自己的命运的女孩，我感到非常自豪。<br>
+NANNASPRITE：我只想在你投入战斗之前把这一切都说给你听！<br>
+JANE：哦，天哪。<br>
+JANE：奶奶，我不知道该怎么回答。<br>
+JANE：谢谢你的鼓舞人心的话！<br>
+NANNASPRITE：呵~呵~！<br>
+JANE：我认为John能拥有你这样的导航灵真的是一种幸运。当然，更不用说你还是他的奶奶。<br>
+JANE：怪不得他总是能在逆境中翻盘。<br>
+JANE：如果最初我也有一个你这样的人给我出谋划策，也许我能把我的人生过得更好。<br>
+JANE：也许我就不会感到如此失落。<br>
+NANNASPRITE：但是，感到失落是正常的。<br>
+NANNASPRITE：相信我，不得不在时限内自己找到自己的路会让你变得比身边有个老太太给你灌输所有的答案时聪明得多。<br>
+NANNASPRITE：而且无论如何，现在你有我了！<br>
+NANNASPRITE：我想现在距离John上次向我寻求指导已经过去了很久很久。<br>
+NANNASPRITE：与他用笑话书重击了我的那一天相比，那个男孩真的长大了好多。<br>
+NANNASPRITE：从现在起，如果你把我看作你的导航灵，我会很高兴的。:B<br>
+JANE：哇！:O<br>
+JANE：哦我的天哪，没问题，谢谢你！<br>
+NANNASPRITE：事实上，我已经从那个猫女孩那里听说了，你和她会在接下来这场宏大的战争中承担治疗职责。<br>
+NANNASPRITE：恰好我的专长也是治疗。当然，是仅次于烘焙。（以及恶作剧。）<br>
+NANNASPRITE：为什么不让我也帮帮忙呢？<br>
+JANE：那太好了！<br>
+NANNASPRITE：哦！对了，Jane，还有一件事。<br>
+NANNASPRITE：你要知道……
+</span></p>
+          </div>
+        <div class="o_story-nav type-hs-copy line-tight pad-x-0 pad-x-lg--md mar-b-lg">
+            <div>
+              <span class="">&gt;</span>
+              <a href="https://linzhiyi622.github.io/homestuckjz.GitHub.io/7806.html"
+                >[A6A6I5] ====></a><br>
+            </div>
+        </div>
+      
+<footer id="story-footer" role="banner">
+  <div id="story_footer_container" class="o_story-page-footer flex pad-t-0 pad-x-0
+     flex-justify 
+    ">
+      <div class="pad-l-lg--md mar-b-md type-hs-small type-hs-bottom--md type-center type-left--md">
+        <ul class="o_game-nav">
+          <li class="o_game-nav-item">
+            <a id="o_start-over"  href="/story/1">Start Over</a>
+          </li>
+            <li class="o_game-nav-item">
+              <a  href="/story/89">Go Back</a>
+            </li>
+        </ul>
+      </div>
+      <script>
+//<![CDATA[
+$(document).ready(function() { Gamenav.checkAutosave(); });
+//]]>
+</script>
+      <nav id="gamenav-container" data-gamenav-state="closed" role="navigation" class="o_gamenav-container">
+        <a href="javascript:void(0)" data-gamenav-close class="nav-btn color-black pad-y-rg type-rg" style="text-decoration:none;"><i class="icon-close"></i><span>Dismiss</span></a>
+        <ul class="o_game-nav pad-r-lg--md o_game-options">
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.saveGame('story', 90);">Save Game</a>
+            <i class="icon-tool-tip tooltip-target" data-tooltip aria-haspopup="true" 
+               title='If you have cookies enabled, you can save your spot in the story. Click "Save Game", then when you return to the site, click "Load Game" to return to where you were.'>
+            </i>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.autoSaveGame();">Auto-Save!</a>
+            <i class="icon-tool-tip tooltip-target" data-tooltip aria-haspopup="true" 
+               title='If you have cookies enabled, click this to automatically save your spot in the story wherever you go! When you return to the site later, it will automatically take you to where you left off. Pretty neat! 
+
+If this mode ever gets annoying though, remember you can just delete the cookies by clicking "Delete Game Data".'>
+            </i>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.loadGame();">Load&nbsp;Game</a>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.deleteGame();">Delete Game Data</a>
+          </li>
+        </ul>
+      </nav>
+    <a href="javascript:void(0)" data-gamenav-open class="nav-btn nav-btn--center type-hs-small mar-b-md" style="text-decoration:none; text-transform: none; font-size:14px; line-height:14px;"><span>Options</span> <i class="icon-menu" style="margin:0;"></i></a>
+  </div>
+</footer>
+
+  
+    </div>
+  </div>
+
+  
+</div>
+
+    
+<div class="o_site-footer row pos-r pad-t-rg pad-b-xl pad-b-0--md bg-dark-gray">
+  <div class="float-l"><img src="https://www.homestuck.com/assets/footer_logo-a913b68f0efbaed8da48bc0a4f22b35d369f40d0e4db132013acbe6f26b3e37f.gif" alt="Footer logo" /><br></div>
+  <div class="float-r disp-n disp-bl--sm"><img src="https://www.homestuck.com/assets/footer_logo-a913b68f0efbaed8da48bc0a4f22b35d369f40d0e4db132013acbe6f26b3e37f.gif" alt="Footer logo" /><br></div>
+  <div class="type-center pad-t-md--md">
+    <ul>
+      <li><a href="/contacts">Contacts</a></li>
+      <li><a href="/privacy">Privacy Policy</a></li>
+    </ul>
+    <div><span style="white-space:nowrap;">&copy; 2018 Homestuck</span> <span style="white-space:nowrap;">and VIZ Media</span></div>
+  </div>
+</div>
+
+
+
+    <div id="overlay"      data-overlay-state="off" class="o_overlay"></div>
+    <div id="game_overlay" data-game-overlay-state="off" class="o_game-overlay"></div>
+    <div id="overlay_wait" data-overlay-state="off" class="o_overlay-wait"></div>
+
+
+
+  </body>
+</html>
