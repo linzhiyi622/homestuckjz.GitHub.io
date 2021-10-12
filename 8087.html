@@ -47,9 +47,11 @@
         <div class="mar-x-auto" style="background-color:#1A1A1A;padding-bottom:0px;max-width:950px;">
           <a href="/story"><img src="https://www.homestuck.com/assets/collide_header-b97d408b1d97b6eb1bb3ac10b7564e0f79d3ff527604d9fc9633d38fd2a0e94a.gif" alt="Collide header" /></a>
         </div>
-        <div class="mar-x-auto type-center pad-b-sm pad-b-rg--md" style="max-width:950px;">
-          <div class="mar-x-auto" style="background-color:#262626;">
-            <div class="pos-r" style="width:100%;height:0;padding-bottom:68.421053%;">
+        <div id="animation_container" class="bg-black" style="width:950px; 
+            height:640px;">
+            <canvas id="canvas" width="950" height="640" style="position: absolute; display: none;"></canvas>
+            <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:950px; height:640px; position: absolute; left: 0px; top: 0px; display: none;">
+            </div>
               <iframe class="markdown-player" 
   
 src="//player.bilibili.com/player.html?aid=9643757&p=20&amp;high_quality=0&amp;danmaku=1&amp;as_wide=0" 
