@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<!--[if IE 9 ]>    <html dir="ltr" lang="en-US" class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en-US"><!--<![endif]-->
+<html>
+  <head>
+  <!-- application -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <meta charset="UTF-8">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"1b930da09b","applicationID":"65900267","transactionName":"cFkNREpaWA9dF0pBVlRTEB9LQVsRQQ==","queueTime":0,"applicationTime":6,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"1b930da09b",applicationID:"65900267"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>The Homestuck Epilogues</title>
+    <meta name="description" content="Tales of dubious authenticity.">
+    <script>
+//<![CDATA[
+var getGAEventLabel = function(){ return "The Homestuck Epilogues"; };
+//]]>
+</script>
+      <link rel="canonical" href="/epilogues/prologue/2">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#6bbe4a">
+<meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" media="all" href="assets_epi/1.css" />
+      <link rel="stylesheet" href="https://use.typekit.net/kek1uwn.css">
+    <link rel="stylesheet" media="all" href="assets_epi/2.css" />
+    <script src="assets_epi/3.js"></script>
+    <script src="assets_epi/4.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-136373-45', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </head>
+  
+  <body
+    class="epilogue"
+>
+
+    
+    <header id="site-header" role="banner">
+  <div id="header-container" class="o_story-page-header row flex pad-t-0 ">
+    <a href="javascript:void(0)" data-nav-open class="nav-btn nav-btn--center color-white" style="overflow-wrap:normal;text-decoration:none;"><i class="icon-menu"></i><span>Menu</span></a>
+    <nav id="nav-container" data-nav-state="closed" role="navigation" class="o_nav-container">
+      <a href="javascript:void(0)" data-nav-close class="nav-btn color-white pad-y-rg type-rg" style="overflow-wrap:normal;text-decoration:none;"><i class="icon-close"></i><span>Dismiss</span></a>
+      <ul id="primary-nav" class="o_primary-nav style-caps weight-bold disp-ib color-white type-rg">
+        <li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#29ff4a" href="/">HOME</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#39d5f6" href="/stories">READ</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#39d5f6" href="/info-story">INFO</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#f7f72a" href="/info-shop">SHOP</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn div-candycorn"><a class="o_primary-nav-link" style="color:#f7f72a" href="/info-games">GAMES</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn pipe"><a class="o_primary-nav-link" style="color:#ffb529" href="/news">NEWS</a></li><!--
+     --><li class="o_primary-nav-item slide-candycorn"><a class="o_primary-nav-link" style="color:#ffb529"  href="/info-more">MORE</a></li>
+      </ul>
+    </nav>
+    <div id="site-search" class="o_site-search disp-ib">
+      <form action="/search" method="GET">
+        <input name="search" type="search" class="o_search-ac o_site-search-field" placeholder="" autocomplete="off">
+        <button class="o_site-search-btn"><i class="icon-search"></i></button>
+      </form>
+    </div>
+  </div>
+</header>
+    
+
+    <div class="row bg-white bg-light-gray--md pad-t-md--md pos-r">
+  <div id="content_container" class="mar-x-auto disp-bl bg-white" style="max-width:650px;">
+    <div class="pos-r pad-t-sm pad-x-lg--md type-center" style="overflow:visible; height:72px;">
+      <h3 class="disp-ib type-hsep-header line-tight type-lg pad-t-md">
+        2
+      </h3>
+    </div>
+  </div>
+</div>
+
+<div class="row bg-white bg-light-gray--md pad-b-md pad-b-lg--md pos-r pad-t-md pad-t-0--md">
+  <div class="mar-x-auto disp-bl bg-white pad-t-lg" style="max-width:650px;">
+      <div class="o-story_text o_epilogue type-rg type-sm--md line-caption line-copy--md pad-x-0 pad-x-lg--md pad-b-lg"><p class="no-indent"><span class="opener type-hs-opener-rg type-hs-opener-sm--md">W</span>hen you arrive at Rose’s apartment, you find her asleep on the couch. You slide the balcony door open, quietly.</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="john">JOHN: rose?</p>
+</div>
+<p class="no-indent">Her eyes flutter open. She looks like a ghost, and not the kind of ghost that looks and acts exactly like an alive person. </p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="rose">ROSE: How... how long have I been sleeping?</p>
+  <p class="john">JOHN: i dunno. i just got here.</p>
+  <p class="john">JOHN: are you ok?</p>
+  <p class="rose">ROSE: I’ll be fine.</p>
+  <p class="john">JOHN: that looks like a lot of pills you’re taking there. </p>
+  <p class="rose">ROSE: Yeah. It’s not what you’re thinking though.</p>
+  <p class="john">JOHN: what am i thinking?</p>
+  <p class="rose">ROSE: These are controlled substances that have been prescribed by a legitimate doctor to ease the symptoms of my condition. I am using them only as instructed.</p>
+  <p class="john">JOHN: ok??</p>
+  <p class="rose">ROSE: So there’s nothing to worry about.</p>
+  <p class="john">JOHN: but you said you have a condition. isn’t that...bad?</p>
+</div>
+  <p class="no-indent">You watch her rise in stages. Her arm is trembling where she’s bracing it on the couch.</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="rose">ROSE: Oh. Yes. The condition itself is not ideal, obviously. And perhaps it does constitute something to worry about, in the context of a different conversation. All I’m trying to say is, I’m not backsliding, if that’s what you’re wondering.</p>
+</div>
+<p class="no-indent">You spend several pregnant moments saying nothing at all in response to this. You examine Rose’s supine, languid form on the couch, optimistic that she will continue speaking any moment now.</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="rose">ROSE: I struggled with substance abuse for a while, years ago. Remember?</p>
+  <p class="john">JOHN: rose, jesus. i wasn’t going to accuse you of being a drug addict, and i didn’t fly over here to give you an intervention.</p>
+  <p class="john">JOHN: it sounded like you had some important stuff to tell me, and the fact that you also seem to be sick is more than a little alarming!</p>
+  <p class="rose">ROSE: I wouldn’t say I’m sick.</p>
+  <p class="rose">ROSE: Just having spectacularly debilitating headaches as a result of my visions becoming more frequent.</p>
+  <p class="john">JOHN: oh yeah.</p>
+  <p class="john">JOHN: what are these visions you’re having?</p>
+  <p class="rose">ROSE: I’m a Seer of Light, John.</p>
+  <p class="john">JOHN: i know. </p>
+  <p class="john">JOHN: so you mean like, your standard psychic visions about the future and stuff?</p>
+  <p class="john">JOHN: what’s going to happen? should we be worried?</p>
+  <p class="rose">ROSE: It doesn’t technically pertain to the future. Well, not our future. </p>
+  <p class="rose">ROSE: My abilities have broadened considerably beyond their previous horizon. They shed light on many unseen events. Past, present, future, in realities and frames of reference that have no intersection with ours at all.</p>
+  <p class="rose">ROSE: It seems to be an unfortunate side effect of god tier abilities. They can advance at a rate beyond one’s physical ability to keep up with.</p>
+  <p class="rose">ROSE: Fortunately it doesn’t seem to be happening to anyone other than me. </p>
+  <p class="john">JOHN: yeah, can’t say i’ve noticed anything like that.</p>
+  <p class="john">JOHN: or improvement in my powers for that matter.</p>
+  <p class="rose">ROSE: It’s not about gaining additional power, so much as the gradual dissolving of the boundaries between your own awareness and that of your many doomed selves who perished in other timelines. </p>
+  <p class="rose">ROSE: It’s a slow and apparently rather uncomfortable accretion of knowledge. Perhaps I’m the only one to notice any change, since my aspect explicitly relates to knowledge. </p>
+  <p class="john">JOHN: i guess that all makes sense.</p>
+  <p class="john">JOHN: so what are these visions showing you?</p>
+  <p class="rose">ROSE: Many things. They’re quite disjointed, and sometimes hard to rearrange into coherence. </p>
+  <p class="rose">ROSE: But in totality, I have pieced together a greater understanding of our present situation and all the events that led us here.</p>
+</div>
+  <p class="no-indent">You watch Rose stagger to her feet and cross the apartment. At the kitchenette, she knocks back another pill with a practiced motion, no water. Her vacant stare drills into the countertop as she quietly waits for the medication to take effect. </p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="john">JOHN: ...and?</p>
+  <p class="rose">ROSE: And what?</p>
+  <p class="john">JOHN: what is it about our situation that you wanted to tell me?</p>
+  <p class="john">JOHN: is it bad?</p>
+  <p class="rose">ROSE: Good and bad are words that don’t mean anything, beyond a certain threshold of mortal consideration.</p>
+  <p class="rose">ROSE: There’s a different scale I’ve come to understand. Another dichotomy that’s less... emotional, I guess?</p>
+  <p class="rose">ROSE: Consider, instead of the word “good,” using the word “essential.”</p>
+  <p class="rose">ROSE: And what exists at the opposite polarity from essential is... </p>
+  <p class="rose">ROSE: Something that is best not to contemplate.</p>
+  <p class="john">JOHN: what are you talking about?</p>
+  <p class="john">JOHN: this sounds fucked up.</p>
+  <p class="rose">ROSE: Yes, that sounds like a reaction you would definitely have to the things I’m telling you.</p>
+  <p class="rose">ROSE: I really should cut it out, and just start from the beginning.</p>
+</div>
+<p class="no-indent">You follow Rose to the balcony. She raises a hand and points directly into the clear blue sky. She points with purpose, as if to say, </span><span class="Standard-Text CharOverride-14">there</span><span class="Standard-Text">. Right there, precisely, is where the green sun would be, if it still existed. </p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="rose">ROSE: The green sun is gone.</p>
+  <p class="john">JOHN: what??</p>
+  <p class="rose">ROSE: It has been destroyed. At least, from the current frame of reference it has.</p>
+  <p class="rose">ROSE: It still existed, and therefore in a way that’s hard to explain, currently exists, over a nearly infinite span of time, presiding over the birth and death of countless universes.</p>
+  <p class="rose">ROSE: But this universe, our universe, is not one of them.</p>
+  <p class="john">JOHN: you saw this in a vision?</p>
+  <p class="rose">ROSE: No. Jade told me.</p>
+  <p class="john">JOHN: she did?</p>
+  <p class="john">JOHN: how does she know?</p>
+  <p class="rose">ROSE: She can’t draw from its power anymore. She no longer has the ability of a First Guardian.</p>
+  <p class="rose">ROSE: It has been this way for several years. I suspect she has kept this fact on the downlow, however.</p>
+  <p class="john">JOHN: that’s... </p>
+  <p class="john">JOHN: surprising, i guess?</p>
+  <p class="john">JOHN: or maybe not. i dunno, it’s not like she tells me a whole lot these days.</p>
+  <p class="rose">ROSE: It’s also not like she’s had any particular need to unleash the full fury of the green sun, not while she’s been gallivanting around with Dave and Karkat under whatever perplexing social arrangement they have settled on.</p>
+  <p class="rose">ROSE: Anyway, her account of the sun’s destruction syncs up with the data supplied by my visions. I have no doubt it’s gone.</p>
+  <p class="john">JOHN: how did that happen?</p>
+  <p class="rose">ROSE: It doesn’t matter much, for our purposes.</p>
+  <p class="rose">ROSE: There was a cataclysmic event. A suicide strike by a very powerful being. Much like the one Dave and I attempted, once upon a time.</p>
+  <p class="rose">ROSE: But it turned out the explosive force we released was only a catalyst. A causal gesture. What was needed to destroy the sun was a consumptive assault.</p>
+  <p class="john">JOHN: consumptive?</p>
+  <p class="rose">ROSE: The entire sun was swallowed by a supermassive black hole. </p>
+  <p class="rose">ROSE: I digress though. </p>
+</div>
+<p class="no-indent">You press your eyes shut, just for a moment. Behind them you see </span><em>a black hole so supermassive that it spans the width of eternity.</em></p>
+<p>You quickly open your eyes again, and pretend to forget what you just saw. </p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="rose">ROSE: There’s really no route through this expository garden path that will adequately cushion you from the bottom line, John.</p>
+  <p class="rose">ROSE: You will need to travel back into canon and defeat Lord English.</p>
+</div>
+<p class="no-indent">You... </p>
+<p class="Command">&gt; Shrug and try to look casual.</p>
+<p class="no-indent">You pull off the most casual shrug that a guy has ever shrugged when being presented with the inevitability of his own fate. If Rose were looking at you right now, she would be totally convinced that you are approaching this topic with a level of nonchalance that is entirely plausible and genuine. You’re sure of it. </p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="john">JOHN: yeah, i had a feeling that was going to come up again someday.</p>
+  <p class="rose">ROSE: I’m sure we all did. That is, even those of us without visions.</p>
+  <p class="john">JOHN: i was doing my best not to think about it. i guess we can’t put it off any longer then?</p>
+  <p class="rose">ROSE: Now is the time. We are rapidly approaching a point of no return. If the decision isn’t made soon, it will be too late. The issue will no longer matter.</p>
+  <p class="john">JOHN: when exactly is the point of no return?</p>
+  <p class="rose">ROSE: Today.</p>
+  <p class="john">JOHN: wow. </p>
+  <p class="john">JOHN: ok then.</p>
+  <p class="john">JOHN: first, one question. um...</p>
+  <p class="john">JOHN: why?</p>
+  <p class="rose">ROSE: Why what?</p>
+  <p class="john">JOHN: why do i need to go back and beat him?</p>
+  <p class="john">JOHN: i mean, sorry if this is a stupid question. i guess he’s a huge awful monster, and that’s just what you’re supposed to do with huge awful monsters. take them down for their crimes, and such.</p>
+  <p class="john">JOHN: but why does he actually need to be defeated at all? to be honest, it’s been years since we’ve even bothered thinking about any of this, and everything seems... </p>
+</div>
+<p class="Command">&gt; Take a look around and survey the current status of all life on Earth, which is totally possible to do from the vantage point of a single apartment balcony. </p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="john">JOHN: fine?</p>
+  <p class="rose">ROSE: Of course everything is fine here.</p>
+  <p class="rose">ROSE: We’re outside of canon now.</p>
+  <p class="john">JOHN: yeah, i know. what does that actually MEAN though?</p>
+  <p class="john">JOHN: are you saying this isn’t really happening?</p>
+  <p class="rose">ROSE: Of course it’s happening. </p>
+  <p class="rose">ROSE: Just because certain events take place outside of canon, it doesn’t mean those events are non-canon.</p>
+  <p class="john">JOHN: oh.</p>
+  <p class="rose">ROSE: In other words, there is an important distinction between events which can be considered to occur inside canon, outside canon, and those which are not canon at all.</p>
+  <p class="rose">ROSE: The day we went through that door and claimed our reward, we passed a threshold between continua marked by differing degrees of relevance, truth, and essentiality. </p>
+  <p class="rose">ROSE: Those are the three pillars of canon.</p>
+  <p class="john">JOHN: what?</p>
+</div>
+  <p class="no-indent">Rose shoots you an irritated look. You know what that look means. It’s reserved for the sort of bozo who just said “what” once too often. </p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="rose">ROSE: Any event said to take place inside canon will have nonzero values of relevance and essentiality, while maintaining an absolute foundation in truth, by definition.</p>
+  <p class="rose">ROSE: Whereas events outside canon have diminished values of relevance and essentiality. Or, for the most part, can be considered neither relevant nor essential at all. </p>
+  <p class="rose">ROSE: But such events can’t be said to be untrue either. Instead, it’s better to regard their truth value as highly conditional. </p>
+  <p class="rose">ROSE: Are you still following?</p>
+</div>
+<p class="Command">&gt; Say “oh, yeah. totally.”</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="john">JOHN: oh, yeah. totally.</p>
+  <p class="rose">ROSE: So to be clear, everything that’s taken place here on Earth C since we exited canon can be considered completely irrelevant, and for the most part, absolutely inessential. Yet none of it can be called untrue. </p>
+  <p class="rose">ROSE: At least, up until precisely today. </p>
+  <p class="john">JOHN: ok.</p>
+  <p class="john">JOHN: then what does non-canon mean?</p>
+  <p class="rose">ROSE: Events that are formally non-canon have no truth whatsoever, by definition. </p>
+  <p class="rose">ROSE: They may have relevance and essentiality values that are nonzero, or even quite high, but only as projections along an imaginary axis, resulting from highly subjective frames of reference.</p>
+  <p class="rose">ROSE: But due to those events having no truth, and thus carrying no real weight, the other properties are basically rendered meaningless.</p>
+</div>
+  <p>You can feel your eyes go wide as the gears in your head slow to a stop. The implications of what Rose is saying are as vast as they are completely incomprehensible. Your mind has just been BLOWN.</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="rose">ROSE: John?</p>
+  <p class="rose">ROSE: Are you okay? Your pupils have gone quite wide, thereby facilitating the appearance that your mind has just been blown.</p>
+  <p class="john">JOHN: sorry, i’m just trying to wrap my head around this.</p>
+  <p class="rose">ROSE: You of all people really should have a good intuitive grasp over these concepts already. </p>
+  <p class="rose">ROSE: You’re the one with the retcon powers, after all.</p>
+  <p class="john">JOHN: i know!</p>
+  <p class="john">JOHN: like, i mostly get it. i think.</p>
+  <p class="john">JOHN: i just wouldn’t have thought to put all of this in such a jargony way.</p>
+  <p class="rose">ROSE: Sorry. That’s kind of what I do.</p>
+  <p class="john">JOHN: it’s fine. i’m just a bit rusty is all. </p>
+  <p class="john">JOHN: it feels like it’s been so long since i did, or even thought about... anything that mattered at all.</p>
+  <p class="rose">ROSE: Yes, the longer we live outside of canon, the more tenuous our relationship with canon becomes.</p>
+  <p class="rose">ROSE: Hence the urgency.</p>
+  <p class="john">JOHN: then what’s going to happen if we keep dragging our feet?</p>
+  <p class="rose">ROSE: I mentioned that events outside canon have a truth value that tends to be conditional, remember?</p>
+  <p class="john">JOHN: um.</p>
+  <p class="rose">ROSE: Well, I did. But let me put it another way.</p>
+  <p class="rose">ROSE: As long as we live outside canon, everything that happens will technically be “real,” but only conditionally. </p>
+  <p class="rose">ROSE: There are certain crucial events inside canon which must happen in order to continue to prop up the legitimacy of events here on Earth C. </p>
+  <p class="rose">ROSE: And you specifically, John, have a responsibility to make sure those events take place.</p>
+  <p class="john">JOHN: and i take it that means going back and killing lord english?</p>
+  <p class="rose">ROSE: Yes.</p>
+  <p class="rose">ROSE: His defeat is the keystone to this entire continuity. </p>
+  <p class="rose">ROSE: Much like his life, in some sick way, governed the overall design of the bridge which that keystone was holding up.</p>
+  <p class="rose">ROSE: But without it, all of this falls apart. Every thing we’ve been through, in a way that’s impossible for a single mind to fully comprehend, becomes retroactively discredited. </p>
+  <p class="john">JOHN: so... reality will be destroyed, or something?</p>
+  <p class="john">JOHN: hasn’t that already sort of happened?</p>
+  <p class="john">JOHN: i mean, when all the black space started cracking?</p>
+  <p class="rose">ROSE: No, this consequence isn’t physical, or even a disruption of the timeline. It’s more of a conceptual unraveling.</p>
+  <p class="rose">ROSE: If you miss the chance to authenticate canon events, something will take place that’s a bit difficult to describe, but I’ve encountered a term for it.</p>
+  <p class="rose">ROSE: It’s called “dissipation.”</p>
+  <p class="rose">ROSE: Like, a notional fading. As if something, somewhere, is undergoing a process of “forgetting,” and we are what is being forgotten.</p>
+  <p class="rose">ROSE: All ideas, people and their full potentialities, possible outcomes and their specific unfolding, all these things live inside conscious frameworks. </p>
+  <p class="rose">ROSE: The further removed we get from authentication of canon events, the less relevant they become, and they slowly fade from the conscious frameworks which kept them stable.</p>
+</div>
+<p class="Command">&gt; Make a theatrically startled expression.</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="john">JOHN: ok, i guess we don’t want THAT to happen.</p>
+  <p class="john">JOHN: or... unhappen. whatever.</p>
+  <p class="john">JOHN: so i just retcon-poof back to english and start like...</p>
+  <p class="john">JOHN: brawling with the dude?</p>
+  <p class="rose">ROSE: Don’t be ridiculous. You wouldn’t last a second.</p>
+  <p class="rose">ROSE: You’ll need a team.</p>
+  <p class="rose">ROSE: Also, you don’t want to just dive headlong into a battle with his hulking adult form. That would be tactically foolish, and furthermore, would skip over some very important steps needed to authenticate canon.</p>
+  <p class="john">JOHN: like what?</p>
+  <p class="rose">ROSE: I mentioned that English’s defeat was the keystone to the continuity. But this is an oversimplification.</p>
+  <p class="john">JOHN: yikes. well, we sure as fuck wouldn’t want to simplify anything.</p>
+  <p class="rose">ROSE: John, please don’t be a bitch. I’m unwell, remember?</p>
+  <p class="john">JOHN: sorry.</p>
+  <p class="rose">ROSE: The true keystone, which is a necessary component of his defeat, is the juju.</p>
+  <p class="rose">ROSE: The house-shaped object you stuck your hand in to gain your retcon powers.</p>
+  <p class="john">JOHN: oh yeah.</p>
+  <p class="rose">ROSE: While empty, it resembles a gap. Like a hole in canon, whose only purpose is to be filled.</p>
+  <p class="rose">ROSE: In serving that purpose, it grants one with the radical canon-altering powers that would be needed to fill it.</p>
+  <p class="rose">ROSE: Once filled, it becomes solid. No longer a gap, but a serviceable, load-bearing wedge in our continuity.</p>
+  <p class="rose">ROSE: Like a keystone.</p>
+  <p class="rose">ROSE: And once delivered to English and directed his way, it empties itself again, releasing its narrative-bridging payload. It functions as a weapon, and in some manner will bring about his demise.</p>
+  <p class="john">JOHN: in some manner?</p>
+  <p class="rose">ROSE: It’s a complicated artifact. As old and unfathomable as anything else in Paradox Space, like the green sun, or English himself. Don’t worry about it for now.</p>
+  <p class="rose">ROSE: The important thing is that, in the due course of your travels, you end up loading and unloading this weapon.</p>
+  <p class="john">JOHN: how am i going to do that?</p>
+  <p class="rose">ROSE: Once you set things in motion, it should just happen naturally through the narrative momentum of your journey. I’m really just warning you about it, rather than instructing you.</p>
+  <p class="john">JOHN: ok. thanks??</p>
+  <p class="rose">ROSE: You’re welcome.</p>
+</div>
+  <p class="no-indent">Rose looks at her phone. You recognize Kanaya’s distinct typing style in the window. Rose’s thumbs begin to fly across the keypad. She continues to text as she talks.</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="john">JOHN: so if we’re going to go back and kill him in time to “authenticate canon,” i guess we have to get going soon.</p>
+  <p class="john">JOHN: like today?</p>
+  <p class="rose">ROSE: Yes.</p>
+  <p class="john">JOHN: are you sure you’re actually up for a fight though? no offense, but you’re looking a little worse for the wear.</p>
+  <p class="rose">ROSE: I’m not going.</p>
+  <p class="john">JOHN: oh.</p>
+  <p class="rose">ROSE: None of us are. Only you.</p>
+  <p class="john">JOHN: what?? but you said... </p>
+  <p class="rose">ROSE: John, this is the victory state. </p>
+  <p class="john">JOHN: what the hell does that even mean.</p>
+  <p class="rose">ROSE: When we went through the door, and passed beyond the threshold of canon, we effectively retired from bearing any responsibility for influencing canon events. We’ve all been sort of decommissioned as active players on the cosmic stage, with severely diminished relevance attributes. </p>
+  <p class="rose">ROSE: All of us except for you, of course, since you’ve retained your retcon abilities.</p>
+  <p class="john">JOHN: ok, i get that. kind of. </p>
+  <p class="john">JOHN: but... couldn’t you all just come along anyway?</p>
+  <p class="rose">ROSE: We could. But it wouldn’t serve any purpose.</p>
+  <p class="rose">ROSE: It wouldn’t plug up the remaining dark spots in canon. </p>
+  <p class="rose">ROSE: You’ll need a group of active players. Those still stuck inside the stream of canonic karma.</p>
+  <p class="john">JOHN: who?</p>
+  <p class="rose">ROSE: Nothing too extravagant. Just different versions of us. </p>
+  <p class="rose">ROSE: Younger versions, from a particularly dysfunctional impasse in our journey.</p>
+  <p class="rose">ROSE: I can point out the exact moment in canon you should be disrupting, and how you should disrupt it.</p>
+  <p class="rose">ROSE: In fact, I’ve already written it down to spare you the trouble of remembering.</p>
+</div>
+<p class="no-indent">Rose leads you back inside and retrieves a letter from her desk. She hands it over, still typing one-handed on her phone. She sits down and you read the letter.</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="john">JOHN: huh.</p>
+  <p class="rose">ROSE: Is anything confusing about my instructions?</p>
+  <p class="john">JOHN: no, i remember all this. it shouldn’t be a problem. </p>
+  <p class="john">JOHN: it’s just weird to think about revisiting this. it seems like an eternity. like... we were all completely different people back then.</p>
+  <p class="rose">ROSE: I assure you we are all still fundamentally the same bunch of losers.</p>
+</div>
+<p class="no-indent">Rose is ultimately right about that, the way she is about most things. You continue to scan the letter, and grimace slightly.</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="john">JOHN: should i really punch her in the face?</p>
+  <p class="john">JOHN: i felt kinda bad about it, last time i did that to someone.</p>
+  <p class="rose">ROSE: Yes. You absolutely should, and must, punch her in the face.</p>
+</div>
+  <p class="no-indent">You exhale and turn the paper over in your hands. The other side is blank. You flip it back over, having fully processed the instructions drafted in the polished purple handwriting. You like how Rose still writes in purple, after all these years. Some things never change.</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="john">JOHN: alright. this seems straightforward enough.</p>
+  <p class="john">JOHN: i mean, aside from the part where we all have to fight an invincible monster.</p>
+  <p class="rose">ROSE: He isn’t entirely invincible. He will be vulnerable to Dave’s weapon. I believe other gambits should present themselves as well.</p>
+  <p class="rose">ROSE: I don’t think it would serve the mission well for me to tell you exactly how it will go.</p>
+  <p class="rose">ROSE: But at least I can offer this bit of encouragement.</p>
+  <p class="rose">ROSE: If you follow my instructions, English will be defeated.</p>
+  <p class="rose">ROSE: It is an absolutely essential outcome.</p>
+  <p class="rose">ROSE: And essential, if you’ll remember, is the word we should be using instead of good.</p>
+  <p class="john">JOHN: i see you’re advising we go after him when he’s young...  </p>
+  <p class="john">JOHN: i guess that makes sense.</p>
+  <p class="john">JOHN: go get him before he gets all big and strong.</p>
+  <p class="john">JOHN: like, kind of a surprise attack?</p>
+  <p class="rose">ROSE: Sure.</p>
+  <p class="john">JOHN: that dude sucks. </p>
+  <p class="john">JOHN: he was taunting me a while back. </p>
+  <p class="john">JOHN: like, i think he WANTS me to come fight him?</p>
+  <p class="john">JOHN: anyway, i just ignored him obviously, because i’m not a stupid idiot.</p>
+  <p class="john">JOHN: but i guess today will be his lucky day.</p>
+</div>
+<p class="no-indent">You take a seat next to Rose on the couch.</p>
+<p class="Command">&gt; Examine your friend.</p>
+<p class="no-indent">Her eyes are closed and her hands are folded in her lap. She’s not asleep, but she looks wasted—like all the life in her has been sucked out through a straw. Like she’s insubstantial. When you were kids you always thought that Rose Lalonde had all the answers, that she could fix any problem with a wall of text and a witty rejoinder. You guess that much about her hasn’t changed. She’s still trying to solve the problems you all left behind. You can’t believe how sick she looks. How did this happen to her?</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="john">JOHN: i should probably get going and let you rest.</p>
+  <p class="john">JOHN: we can talk all about it when i get back. i’ll fill you in on how it went, hopefully you’ll be feeling better by then.</p>
+  <p class="rose">ROSE: Oh. Um.</p>
+  <p class="rose">ROSE: Yeah.</p>
+  <p class="john">JOHN: is something wrong?</p>
+</div>
+<p class="no-indent">Rose opens her eyes and looks at you, but she says nothing. Just looks.</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="john">JOHN: i’m not scared, if that’s what you’re worried about. </p>
+  <p class="john">JOHN: you already said we’re going to defeat him. so, nothing to fret over, right?</p>
+  <p class="rose">ROSE: Yes. You...  </p>
+</div>
+<p class="no-indent">Something flickers through her eyes, almost too quick to catch. When she smiles at you, it’s warm and sincere.</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="rose">ROSE: You’re going to do great.</p>
+</div>
+<p class="no-indent">Rose slides her arms around you. After a while, she releases you from the embrace and gets up to fetch her bottle of pills. She pauses at the bedroom door to look at you one more time.</p>
+<div class="chat type-rg type-hs-small--md">
+  <p class="rose">ROSE: Goodbye, John.</p>
+</div>
+<p class="no-indent">She closes the door behind her.</p>
+<p class="Command">&gt; Look at the letter.</p>
+<p class="no-indent">Your run your thumbs along the edge of the paper. Is this really it? One hug from Rose and you’re off to face your destiny? The instructions in the letter are clear, but you aren’t sure precisely what to do next. Inertia and indecision keep your feet planted firmly on the carpet.</p>
+<p>Then, as if directly answering your quandary, your phone buzzes in your pocket. It’s a text from Roxy.</p>
+<p class="Command">&gt; Read text.</p>
+<p class="no-indent">It sounds important. You get up to go without even thinking about it. You exit through the sliding glass door and leave it open behind you. </p></div>
+      <div class="o_story-nav type-hs-copy line-tight pad-x-0 pad-x-lg--md pad-b-lg">
+        <div>
+          <span>&gt;</span>
+          <a href="https://linzhiyi622.github.io/homestuckjz.GitHub.io/p3">==> </a><br>
+        </div>
+      </div>
+  
+<footer id="story-footer" role="banner">
+  <div id="story_footer_container" class="o_story-page-footer flex pad-t-0 pad-x-0
+     flex-justify 
+    ">
+      <div class="pad-l-lg--md mar-b-md type-hs-small type-hs-bottom--md type-center type-left--md">
+        <ul class="o_game-nav">
+          <li class="o_game-nav-item">
+            <a id="o_start-over"  href="/epilogues/prologue/1">Start Over</a>
+          </li>
+            <li class="o_game-nav-item">
+              <a  href="/epilogues/prologue/1">Go Back</a>
+            </li>
+        </ul>
+      </div>
+      <script>
+//<![CDATA[
+$(document).ready(function() { Gamenav.checkAutosave(); });
+//]]>
+</script>
+      <nav id="gamenav-container" data-gamenav-state="closed" role="navigation" class="o_gamenav-container">
+        <a href="javascript:void(0)" data-gamenav-close class="nav-btn color-black pad-y-rg type-rg" style="text-decoration:none;"><i class="icon-close"></i><span>Dismiss</span></a>
+        <ul class="o_game-nav pad-r-lg--md o_game-options">
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.saveGame('epilogues/prologue', 2);">Save Game</a>
+            <i class="icon-tool-tip tooltip-target" data-tooltip aria-haspopup="true" 
+               title='If you have cookies enabled, you can save your spot in the story. Click "Save Game", then when you return to the site, click "Load Game" to return to where you were.'>
+            </i>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.autoSaveGame();">Auto-Save!</a>
+            <i class="icon-tool-tip tooltip-target" data-tooltip aria-haspopup="true" 
+               title='If you have cookies enabled, click this to automatically save your spot in the story wherever you go! When you return to the site later, it will automatically take you to where you left off. Pretty neat! 
+
+If this mode ever gets annoying though, remember you can just delete the cookies by clicking "Delete Game Data".'>
+            </i>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.loadGame();">Load&nbsp;Game</a>
+          </li>
+          <li class="o_game-nav-item">
+            <a href="javascript:Gamenav.deleteGame();">Delete Game Data</a>
+          </li>
+        </ul>
+      </nav>
+    <a href="javascript:void(0)" data-gamenav-open class="nav-btn nav-btn--center type-hs-small mar-b-md" style="text-decoration:none; text-transform: none; font-size:14px; line-height:14px;"><span>Options</span> <i class="icon-menu" style="margin:0;"></i></a>
+  </div>
+</footer>
+
+
+  </div>
+</div>
+
+
+    
+<div class="o_site-footer row pos-r pad-t-rg pad-b-xl pad-b-0--md bg-dark-gray">
+  <div class="float-l"><img src="/assets/footer_logo-a913b68f0efbaed8da48bc0a4f22b35d369f40d0e4db132013acbe6f26b3e37f.gif" alt="Footer logo" /><br></div>
+  <div class="float-r disp-n disp-bl--sm"><img src="/assets/footer_logo-a913b68f0efbaed8da48bc0a4f22b35d369f40d0e4db132013acbe6f26b3e37f.gif" alt="Footer logo" /><br></div>
+  <div class="type-center pad-t-md--md">
+    <ul>
+      <li><a href="/contacts">Contacts</a></li>
+      <li><a href="/privacy">Privacy Policy</a></li>
+    </ul>
+    <div><span style="white-space:nowrap;">&copy; 2018 Homestuck</span> <span style="white-space:nowrap;">and VIZ Media</span></div>
+  </div>
+</div>
+
+
+
+    <div id="overlay"      data-overlay-state="off" class="o_overlay"></div>
+    <div id="game_overlay" data-game-overlay-state="off" class="o_game-overlay"></div>
+    <div id="overlay_wait" data-overlay-state="off" class="o_overlay-wait"></div>
+
+
+
+  </body>
+</html>
