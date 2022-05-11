@@ -1,0 +1,460 @@
+/*   TROLL HEMOSPECTRUM COLOR VALUES   */
+/*   ///////////////////////////////   */
+
+/* RED */
+/* /// */
+
+.neeris {
+	color: #CB1E00;
+}
+
+.yeshin {
+	color: #CD4748;
+}
+
+.shiopa {
+	color: #A34434;
+}
+
+.cinare {
+	color: #962600;
+}
+.valtel {
+	color: #930000;
+}
+
+.lutzia {
+	color: #8E0F0F;
+}
+
+.sova, .sovara, .annalist {
+	color: #7F0000;
+}
+
+.racren {
+	color: #690000;
+}
+.cepros {
+	color: #631613;
+}
+
+.yarina {
+	color: #E5856D;
+}
+
+/* BRONZE */
+/* ////// */
+
+.talald {
+	color: #CD6500;
+}
+
+.dismas, .fomenter {
+	color: #C44000;
+}
+
+.rodere {
+	color: #B45014;
+}
+
+.garnie {
+	color: #B48E44;
+}
+
+.husske {
+	color: #B25D2C;
+}
+
+.hemiot {
+	color: #A3731A;
+}
+
+.degner {
+	color: #2D261D;
+}
+
+.cera {
+	color: #D86B18;
+}
+
+.bor {
+	color: #65321A;
+}
+
+/* CORNSYRUP */
+/* ///////// */
+
+.arcjec, .thesal, .forgiven {
+	color: #B95C00;
+}
+
+/* YELLOW */
+/* ////// */
+
+.mshiri {
+	color: #D4C64E;
+}
+
+.mshiri--true {
+	color: #FBEC5D;
+}
+
+.medjed {
+	color: #E6B400;
+}
+
+.cul, .culium {
+	color: #D8AA09;
+}
+
+.vyr, .vyrmis {
+	color: #DAAF2D;
+}
+
+.vellia {
+	color: #BDAA00;
+}
+
+.jentha, .mosura, .supernova, .lipsen {
+	color: #B49E18;
+}
+
+.hayyan {
+	color: #B29E14;
+}
+
+.sabine {
+	color: #B07800;
+}
+
+/* LIME */
+/* //// */
+
+.ellsee, .zekura, .vivifier {
+	color: #6C8400;
+}
+
+/* GREEN */
+/* ///// */
+
+.sahvel {
+	color: #9CD47D;
+}
+
+.urodea {
+	color: #5BB43B;
+}
+
+.sirage {
+	color: #619319;
+}
+
+.mekris {
+	color: #207D00;
+}
+
+.albion, .cyprim, .exemplar {
+	color: #407D00;
+}
+
+.pascal {
+	color: #5D7B49;
+}
+
+.linole {
+	color: #43723C;
+}
+
+.aumtzi, .noxious {
+	color: #446F09;
+}
+
+.raurou {
+	color: #48574A;
+}
+
+.tenemi {
+	color: #033B03;
+}
+
+/* JADE */
+/* //// */
+
+.gerbat {
+	color: #039639;
+}
+
+.cepora {
+	color: #007E52;
+}
+
+.glomer {
+	color: #397E57;
+}
+
+.hamifi {
+	color: #00722D;
+}
+
+.principal {
+	color: #346547;
+}
+
+
+
+/* TEAL */
+/* //// */
+
+.femmis {
+	color: #06D6D6;
+}
+
+.turnin {
+	color: #01C09F;
+}
+
+.serpaz, .bohemian {
+	color: #00A596;
+}
+
+.helica {
+	color: #04A180;
+}
+
+.secily, .arcamu, .commandant {
+	color: #0989A0;
+}
+
+.alcest {
+	color: #728682;
+}
+
+.crytum {
+	color: #2D6461;
+}
+
+.aislin {
+	color: #005E5E;
+}
+
+.cadlys {
+	color: #163B3B;
+}
+
+/* BLUE */
+/* //// */
+
+.kimosh {
+	color: #018BCB;
+}
+
+.bytcon {
+	color: #0040AF;
+}
+
+.laivan, .jagerman {
+	color: #004696;
+}
+
+.necron {
+	color: #004182;
+}
+
+.iderra {
+	color: #00317C;
+}
+
+/* INDIGO */
+/* ////// */
+
+.divino {
+	color: #292FA5;
+}
+
+.rypite, .gascon, .bravura {
+	color: #1A1280;
+}
+
+.occeus, .vanguard {
+	color: #00007F;
+}
+
+.dexous {
+	color: #000063;
+}
+
+/* PURPLE */
+
+.cretas {
+	color: #630BCD;
+}
+
+.roxett {
+	color: #9880AB;
+}
+
+.gingou {
+	color: #67489B;
+}
+
+.nez, .nezrui {
+	color: #5E4689;
+}
+
+.keiksi {
+	color: #510E93;
+}
+
+.seinru {
+	color: #390180;
+}
+.taz, .tazsia, .deadlock {
+	color: #39017F;
+}
+
+.endari {
+	color: #39007E;
+}
+
+.sestro, .clarud, .executive {
+	color: #61467B;
+}
+
+.vilcus {
+	color: #411E68;
+}
+
+.edolon {
+	color: #270051;
+}
+
+.pozzol {
+	color: #392C52;
+}
+
+.neilna {
+	color: #2C154A;
+}
+
+/* VIOLET */
+/* ////// */
+
+.calder, .persolus {
+	color: #A00078;
+}
+
+.oricka {
+	color: #542853;
+}
+
+.murrit, .switchem {
+	color: #510049;
+}
+
+/* FILTER CLASSES */
+/* ////////////// */
+
+.albion--filter {
+  filter: invert(33%) sepia(88%) saturate(1176%) hue-rotate(59deg) brightness(92%) contrast(101%);
+}
+
+.dismas--filter {
+  filter: invert(28%) sepia(93%) saturate(1315%) hue-rotate(359deg) brightness(94%) contrast(108%);
+}
+
+.principal--filter {
+  filter: invert(35%) sepia(30%) saturate(593%) hue-rotate(90deg) brightness(90%) contrast(91%);
+}
+
+.murrit--filter {
+  filter: invert(13%) sepia(17%) saturate(6890%) hue-rotate(279deg) brightness(108%) contrast(125%);
+}
+
+
+
+/*   DENIZEN COLOR VALUES   */
+/*   ////////////////////   */
+
+.haniel {
+	color: #404050;
+}
+
+.af {
+	color: #F94F00;
+}
+
+.zehanpuryu {
+	color: #0052F2;
+}
+
+.lilith {
+	color: #B7A99A;
+}
+
+.azbogah {
+	color: #9C4DAD;
+}
+
+.metatron {
+	color: #363636;
+}
+
+/*   CONSORT COLOR VALUES   */
+/*   ////////////////////   */
+
+.guy {
+	color: #CC05B6;
+}
+
+.lady {
+	color: #55C91B;
+}
+
+.bucko {
+	color: #C62501;
+}
+
+.man {
+	color: #13A872;
+}
+
+.kid {
+	color: #ADDB03;
+}
+
+.tee_hanos {
+	color: #573D76;
+}
+
+/*   'DIVINE' COLOR VALUES   */
+/*   ////////////////////   */
+
+.kheparia {
+	color: #DAED87;
+}
+
+.gaiaeon {
+	color: #D08FD9;
+}
+
+.white_noise {
+	color: #000000;
+}
+
+.mimesis {
+	color: #FFFFFF;
+}
+
+
+/* MISCELLANEOUS TEXT EFECTS */
+/* ///////////////////////// */
+
+.boldest {
+	text-shadow: 1px 0 currentColor;
+}
+
+.glitch {
+  background: url("/public/img/static_trans_128x128.gif");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

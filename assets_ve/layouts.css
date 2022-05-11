@@ -1,0 +1,410 @@
+/* =================================== THIS PORTION OF THE CSS IS FOR UNIQUE COMIC PAGE STYLING ================================ */
+
+/* Font faces */
+
+@font-face {
+	font-family: "Jokerman"; src: url("//db.onlinewebfonts.com/t/54b9af0b935475d59a4bc1f6cdad764b.eot");
+	src: url("//db.onlinewebfonts.com/t/54b9af0b935475d59a4bc1f6cdad764b.eot?#iefix") format("embedded-opentype"),
+	url("//db.onlinewebfonts.com/t/54b9af0b935475d59a4bc1f6cdad764b.woff2") format("woff2"),
+	url("//db.onlinewebfonts.com/t/54b9af0b935475d59a4bc1f6cdad764b.woff") format("woff"),
+	url("//db.onlinewebfonts.com/t/54b9af0b935475d59a4bc1f6cdad764b.ttf") format("truetype"),
+	url("//db.onlinewebfonts.com/t/54b9af0b935475d59a4bc1f6cdad764b.svg#Jokerman") format("svg"); 
+}
+
+@font-face {
+	font-family: "DCRC"; src: url("//cdn.deconreconstruction.com/vasterror/css/DCRC.eot");
+	src: url("//cdn.deconreconstruction.com/vasterror/css/DCRC.eot#iefix") format("embedded-opentype"),
+	url("//cdn.deconreconstruction.com/vasterror/css/DCRC.woff2") format("woff2"),
+	url("//cdn.deconreconstruction.com/vasterror/css/DCRC.woff") format("woff"),
+	url("//cdn.deconreconstruction.com/vasterror/css/DCRC.ttf") format("truetype"),
+	url("//cdn.deconreconstruction.com/vasterror/css/DCRC.svg#DCRC") format("svg");
+}
+
+/* CSS Selectors for HTML5 */
+/* /////////////////////// */
+
+.layout-default--html5 iframe,
+.layout-mimesis--html5 iframe,
+.layout-sova--html5 iframe {
+	margin: 0px -25px;
+}
+
+/* CSS Selectors for Static styling */
+/* //////////////////////////////// */
+
+.layout-static--no-command #command {
+    display: none;
+}
+
+.layout-static header,
+.layout-static--no-command header {
+    background-color: #000000;
+}
+
+body.layout-static,
+body.layout-static--no-command  {
+    background-image: url(../img/layout/static_light_f1.gif);
+}
+
+.layout-static main,
+.layout-static--no-command main {
+    background-image: url(../img/layout/static_dark_f1.gif);
+}
+
+.layout-static nav,
+.layout-static--no-command nav {
+	color: #ffffff !important;
+}
+
+.layout-static nav a,
+.layout-static--no-command nav a {
+	color: #ffffff !important;
+}
+
+.layout-static #page a,
+.layout-static--no-command #page a {
+    color: #000000 !important;
+}
+
+/* CSS Selectors for Edolon chatlogs */
+/* ///////////////////////////////// */
+
+.edolon-theme .spoiler.open {
+	background-color: #000000;
+}
+
+/* CSS Selectors for Gaiaeon styling */
+/* ///////////////////////////////// */
+
+.layout-gaiaeon #command,
+.layout-gaiaeon--fullwidth #command {
+    color: #FFFFFF !important;
+}
+
+.layout-gaiaeon header,
+.layout-gaiaeon--950 header,
+.layout-gaiaeon--fullwidth header{
+    background-color: #000000;
+}
+
+body.layout-gaiaeon,
+body.layout-gaiaeon--950,
+body.layout-gaiaeon--fullwidth {
+    background-image: url(../img/layout/static_dark_f1.gif);
+}
+
+.layout-gaiaeon main,
+.layout-gaiaeon--950 main {
+	background-image: url(../img/layout/gaiaeon_gradient.png);
+    background-color: transparent !important;
+}
+
+.layout-gaiaeon nav,
+.layout-gaiaeon--950 nav,
+.layout-gaiaeon--fullwidth nav {
+	color: #ffffff !important;
+}
+
+.layout-gaiaeon nav a,
+.layout-gaiaeon--950 nav a,
+.layout-gaiaeon--fullwidth nav a {
+	color: #ffffff !important;
+}
+
+.layout-gaiaeon #page,
+.layout-gaiaeon--950 #page {
+	background-color: transparent !important;
+}
+
+.layout-gaiaeon .spoiler.open,
+.layout-gaiaeon--950 .spoiler.open,
+.layout-gaiaeon--fullwidth .spoiler.open {
+	background-color: #000000;
+}
+
+.layout-gaiaeon #page, .layout-gaiaeon #page a, .layout-gaiaeon #page-footer,
+.layout-gaiaeon--950 #page, .layout-gaiaeon--950 #page a, .layout-gaiaeon--950 #page-footer,
+.layout-gaiaeon--fullwidth #page, .layout-gaiaeon--fullwidth #page a, .layout-gaiaeon--fullwidth #page-footer {
+    color: #FFFFFF !important;
+}
+
+/* CSS Selectors for Gaiaeon styling specifically for Page 1000 */
+/* //////////////////////////////////////////////////////////// */
+
+.layout-gaiaeon--950 #body-container {
+	width: 950px;
+	padding: 0px;
+}
+
+.layout-gaiaeon--950 #command {
+	display: none;
+}
+
+.layout-gaiaeon--950 #content {
+	max-width: 950px !important;
+}
+
+.layout-gaiaeon--950 #content object {
+	max-width: 950px !important;
+}
+
+/* CSS Selectors for Gaiaeon styling specifically for full width */
+/* ///////////////////////////////////////////////////////////// */
+
+@media only screen and (max-width: 654px) {
+	
+	body.layout-gaiaeon--fullwidth {
+		background-image: none !important;
+		background-color: #000000 !important;
+	}
+	
+	.layout-gaiaeon--fullwidth #page {
+		width: auto !important;
+	}
+}
+
+.layout-gaiaeon--fullwidth #body-container {
+	background-color: #000000;
+	width: 95vw;
+}
+
+.layout-gaiaeon--fullwidth #page {
+	width: 95vw;
+	max-width: 95vw;
+	padding: 0 0 25px 0;
+	background-color: #000000;
+}
+
+.layout-gaiaeon--fullwidth #content img {
+	max-width: 95vw;
+}
+
+.layout-gaiaeon--fullwidth .spoiler,
+.layout-gaiaeon--fullwidth #page-footer,
+.layout-gaiaeon--fullwidth #footlink-container {
+	max-width: 650px !important;
+	margin: auto;
+}
+
+/* CSS Selectors for I2 styling */
+/* //////////////////////////// */
+
+.layout-mimesis #command,
+.layout-mimesis--html5 #command {
+    color: #FFFFFF !important;
+}
+
+.layout-mimesis header,
+.layout-mimesis--html5 header {
+    background-color: #210030;
+}
+
+body.layout-mimesis,
+body.layout-mimesis--html5  {
+    background-image: url(../img/layout/static_purple.gif);
+}
+
+.layout-mimesis main,
+.layout-mimesis--html5 main {
+	background-image: url(../img/layout/filmreel.gif);
+    background-color: transparent !important;
+}
+
+.layout-mimesis nav,
+.layout-mimesis--html5 nav {
+	color: #ffffff !important;
+}
+
+.layout-mimesis nav a,
+.layout-mimesis--html5 nav a {
+	color: #ffffff !important;
+}
+
+.layout-mimesis #page,
+.layout-mimesis--html5 #page {
+	background-color: #351544 !important;
+}
+
+.layout-mimesis .spoiler.open,
+.layout-mimesis--html5 .spoiler.open {
+	background-color: #000000;
+}
+
+.layout-mimesis #page, .layout-mimesis #page a, .layout-mimesis #page-footer,
+.layout-mimesis--html5 #page, .layout-mimesis--html5 #page a, .layout-mimesis--html5 #page-footer {
+    color: #FFFFFF !important;
+}
+
+.layout-mimesis .append-etchelizer:after,
+.layout-mimesis--html5 .append-etchelizer:after {
+	content: url(../img/nav/nav-rgb-lens.gif);
+}
+
+.layout-mimesis #txtSubmit,
+.layout-mimesis--html5 #txtSubmit {
+	border-color: #461C59;
+	color: #FFFFFF;
+	background-color: #000000;
+	font-family: Courier;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 5px 10px;
+	margin-right: 15px;
+}
+
+.layout-mimesis #btnSubmit,
+.layout-mimesis--html5 #btnSubmit {
+	border-color: #461C59;
+	color: #FA8FFF;
+	background-color: #210030;
+	font-family: Courier;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 5px 15px;
+}
+
+.layout-mimesis #confirmSubmit,
+.layout-mimesis--html5 #confirmSubmit {
+	opacity: 0;
+}
+
+.layout-mimesis .confirmSubmitAnim,
+.layout-mimesis--html5 .confirmSubmitAnim {
+	animation-name: fadeinout;
+	animation-duration: 5s;
+}
+
+/* CSS Selectors for Sova styling */
+/* //////////////////////////// */
+
+.layout-sova header,
+.layout-sova--html5 header {
+    background-color: transparent !important;
+}
+
+body.layout-sova,
+body.layout-sova--html5  {
+    background-image: url(../img/layout/paper_sova.png);
+	/*background-color: #BBA090;*/
+}
+
+.layout-sova main,
+.layout-sova--html5 main {
+	background-image: url(../img/layout/curtains.png);
+	background-color: #15100D !important;
+}
+
+.layout-sova nav,
+.layout-sova--html5 nav {
+	color: #7F0000 !important;
+	background-color: transparent !important;
+}
+
+.layout-sova nav a,
+.layout-sova--html5 nav a {
+	color: #7F0000 !important;
+}
+
+.layout-sova #page,
+.layout-sova--html5 #page {
+	background-color: #EEEEDD !important;
+}
+
+.layout-sova .spoiler.open,
+.layout-sova--html5 .spoiler.open {
+	background-color: #EEEEDD;
+}
+
+.layout-sova #page a, .layout-sova #page-footer,
+.layout-sova--html5 #page a, .layout-sova--html5 #page-footer {
+    color: #7F0000 !important;
+}
+
+.layout-sova .append-etchelizer:after,
+.layout-sova--html5 .append-etchelizer:after {
+	content: url(../img/nav/nav-sova.png);
+}
+
+.layout-thaumatrope--gt #next-command::before {
+	content: "> ",	
+}
+
+.layout-thaumatrope #page,
+.layout-thaumatrope--gt #page {
+	background-color: #3F3F3F; !important
+}
+
+body.layout-thaumatrope,
+body.layout-thaumatrope--gt {
+    background-image: url(https://cdn.deconreconstruction.com/thaumatrope/img/vhs_static.png);
+	color: #FFFFFF;
+}
+
+.layout-thaumatrope main,
+.layout-thaumatrope--gt main {
+	background-image: url(https://cdn.deconreconstruction.com/thaumatrope/img/cassette_sidebars.png);
+    background-color: #7C7C7C !important;
+}
+
+.layout-thaumatrope nav a,
+.layout-thaumatrope--gt nav a {
+	color: #FFFFFF !important;
+}
+
+.layout-thaumatrope .append-etchelizer:after,
+.layout-thaumatrope--gt .append-etchelizer:after {
+	content: url(https://cdn.deconreconstruction.com/vasterror/img/nav-rgb-lens.gif);
+}
+
+.layout-thaumatrope header,
+.layout-thaumatrope--gt header {
+	background-color: #000000;
+}
+
+.layout-thaumatrope #next-command::before {
+	content: "\0025B6 ";
+}
+
+.layout-thaumatrope #next-command-link,
+.layout-thaumatrope--gt #next-command-link {
+	color: #FFFFFF;
+}
+
+.layout-thaumatrope #footlink-container a,
+.layout-thaumatrope--gt #footlink-container a {
+	color: #FFFFFF;
+}
+
+.layout-thaumatrope .dialogueboxcontainer,
+.layout-thaumatrope--gt .dialogueboxcontainer {
+	border: 1px dashed gray;
+	padding: 1px;
+}
+
+.layout-thaumatrope .dialoguebox,
+.layout-thaumatrope--gt .dialoguebox {
+	margin: 3px;
+	padding: 12px;
+	text-align: left;
+	background: #FFFFFF;
+	border-radius: 5px;
+	line-height: 1.35;
+}
+
+@keyframes fadeinout {
+	0% {
+		opacity: 0;
+	}
+	
+	5% {
+		opacity: 1;
+	}
+	
+	80% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity 0;
+	}
+}
